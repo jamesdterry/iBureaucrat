@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B008FF0170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
+		6B008FF1170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
+		6B008FF2170C244A00DB737B /* BCFormSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD3170C244A00DB737B /* BCFormSection.m */; };
+		6B008FF3170C244A00DB737B /* BCFormSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD3170C244A00DB737B /* BCFormSection.m */; };
+		6B008FF4170C244A00DB737B /* BCFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD5170C244A00DB737B /* BCFormView.m */; };
+		6B008FF5170C244A00DB737B /* BCFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD5170C244A00DB737B /* BCFormView.m */; };
+		6B008FF6170C244A00DB737B /* UITableView+IndexPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD8170C244A00DB737B /* UITableView+IndexPaths.m */; };
+		6B008FF7170C244A00DB737B /* UITableView+IndexPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD8170C244A00DB737B /* UITableView+IndexPaths.m */; };
+		6B008FF8170C244A00DB737B /* UITextField+AbstractFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FDA170C244A00DB737B /* UITextField+AbstractFormCell.m */; };
+		6B008FF9170C244A00DB737B /* UITextField+AbstractFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FDA170C244A00DB737B /* UITextField+AbstractFormCell.m */; };
+		6B008FFA170C244A00DB737B /* BCAbstractFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FDD170C244A00DB737B /* BCAbstractFormCell.m */; };
+		6B008FFB170C244A00DB737B /* BCAbstractFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FDD170C244A00DB737B /* BCAbstractFormCell.m */; };
+		6B008FFC170C244A00DB737B /* BCPasswordFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE0170C244A00DB737B /* BCPasswordFormCell.m */; };
+		6B008FFD170C244A00DB737B /* BCPasswordFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE0170C244A00DB737B /* BCPasswordFormCell.m */; };
+		6B008FFE170C244A00DB737B /* BCTextFieldFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE2170C244A00DB737B /* BCTextFieldFormCell.m */; };
+		6B008FFF170C244A00DB737B /* BCTextFieldFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE2170C244A00DB737B /* BCTextFieldFormCell.m */; };
+		6B009000170C244A00DB737B /* BCAbstractFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE5170C244A00DB737B /* BCAbstractFormField.m */; };
+		6B009001170C244A00DB737B /* BCAbstractFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE5170C244A00DB737B /* BCAbstractFormField.m */; };
+		6B009002170C244A00DB737B /* BCPasswordFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE7170C244A00DB737B /* BCPasswordFormField.m */; };
+		6B009003170C244A00DB737B /* BCPasswordFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE7170C244A00DB737B /* BCPasswordFormField.m */; };
+		6B009004170C244A00DB737B /* BCPickerFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE9170C244A00DB737B /* BCPickerFormField.m */; };
+		6B009005170C244A00DB737B /* BCPickerFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE9170C244A00DB737B /* BCPickerFormField.m */; };
+		6B009006170C244A00DB737B /* BCTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEB170C244A00DB737B /* BCTextFormField.m */; };
+		6B009007170C244A00DB737B /* BCTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEB170C244A00DB737B /* BCTextFormField.m */; };
+		6B009008170C244A00DB737B /* BCFormInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEE170C244A00DB737B /* BCFormInputAccessoryView.m */; };
+		6B009009170C244A00DB737B /* BCFormInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEE170C244A00DB737B /* BCFormInputAccessoryView.m */; };
+		6B009019170C246600DB737B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B00900C170C246600DB737B /* AppDelegate.m */; };
+		6B00901A170C246600DB737B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B00900C170C246600DB737B /* AppDelegate.m */; };
+		6B00901C170C246600DB737B /* bureaucrat-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B00900D170C246600DB737B /* bureaucrat-Info.plist */; };
+		6B00901D170C246600DB737B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B00900F170C246600DB737B /* Default-568h@2x.png */; };
+		6B00901E170C246600DB737B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B00900F170C246600DB737B /* Default-568h@2x.png */; };
+		6B00901F170C246600DB737B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B009010170C246600DB737B /* Default.png */; };
+		6B009020170C246600DB737B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B009010170C246600DB737B /* Default.png */; };
+		6B009021170C246600DB737B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B009011170C246600DB737B /* Default@2x.png */; };
+		6B009022170C246600DB737B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B009011170C246600DB737B /* Default@2x.png */; };
+		6B009023170C246600DB737B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B009012170C246600DB737B /* InfoPlist.strings */; };
+		6B009025170C246600DB737B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B009014170C246600DB737B /* ViewController.xib */; };
+		6B009026170C246600DB737B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B009014170C246600DB737B /* ViewController.xib */; };
+		6B009027170C246600DB737B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B009016170C246600DB737B /* main.m */; };
+		6B009029170C246600DB737B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B009018170C246600DB737B /* ViewController.m */; };
+		6B00902A170C246600DB737B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B009018170C246600DB737B /* ViewController.m */; };
+		6B00902C170C460400DB737B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B00902B170C460400DB737B /* QuartzCore.framework */; };
+		6B00902D170C460B00DB737B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B00902B170C460400DB737B /* QuartzCore.framework */; };
+		6BD31AD0170C189A007BAF4F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD31ACF170C189A007BAF4F /* UIKit.framework */; };
+		6BD31AD2170C189A007BAF4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD31AD1170C189A007BAF4F /* Foundation.framework */; };
+		6BD31AD4170C189A007BAF4F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD31AD3170C189A007BAF4F /* CoreGraphics.framework */; };
+		6BD31AF4170C189A007BAF4F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD31AF3170C189A007BAF4F /* SenTestingKit.framework */; };
+		6BD31AF5170C189A007BAF4F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD31ACF170C189A007BAF4F /* UIKit.framework */; };
+		6BD31AF6170C189A007BAF4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD31AD1170C189A007BAF4F /* Foundation.framework */; };
+		6BD31AFE170C189A007BAF4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD31AFC170C189A007BAF4F /* InfoPlist.strings */; };
+		6BD31B01170C189A007BAF4F /* bureaucratTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD31B00170C189A007BAF4F /* bureaucratTests.m */; };
+		BA7980566982CDF4626597BB /* CALayer+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79869CCAFB954A3F4C828B /* CALayer+Image.m */; };
+		BA7980A27ADC2FCA96823702 /* CKUITools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BA798BD2467652C12CEF09D3 /* CKUITools.podspec */; };
+		BA7980FABCD81B69803B8F90 /* CKUITools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BA798BD2467652C12CEF09D3 /* CKUITools.podspec */; };
+		BA7981F7B778C3A7DB0A22D2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BA798DBD837D43CBBA125066 /* LICENSE */; };
+		BA79835E276782AA24CEFFBC /* radialGeometry.c in Sources */ = {isa = PBXBuildFile; fileRef = BA798DB9DB9A6CEDF8267809 /* radialGeometry.c */; };
+		BA7983C796DE5F729420CD28 /* randomDouble.c in Sources */ = {isa = PBXBuildFile; fileRef = BA798B8098C4509E56FBCCD6 /* randomDouble.c */; };
+		BA7985427BEEDD29758E28B8 /* UIScreen+CKUITools.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798BB4566800FA003FC672 /* UIScreen+CKUITools.m */; };
+		BA7985A6644FA5922D30644F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BA798C04A4DAF97485F9EDDD /* .gitignore */; };
+		BA79864FD5FAC725703B469A /* randomDouble.c in Sources */ = {isa = PBXBuildFile; fileRef = BA798B8098C4509E56FBCCD6 /* randomDouble.c */; };
+		BA798697D2CA18597ABB9D33 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BA798DBD837D43CBBA125066 /* LICENSE */; };
+		BA7986C1B02C1076C97C53F6 /* CALayer+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79869CCAFB954A3F4C828B /* CALayer+Image.m */; };
+		BA7986F0572F83BDB641B78D /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798FE7A20E3EC5A3CE3EDF /* UIView+Position.m */; };
+		BA798939FDD7D2678D8B15A7 /* radialGeometry.c in Sources */ = {isa = PBXBuildFile; fileRef = BA798DB9DB9A6CEDF8267809 /* radialGeometry.c */; };
+		BA798A7072EED4E09D2B494F /* UIScreen+CKUITools.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798BB4566800FA003FC672 /* UIScreen+CKUITools.m */; };
+		BA798C12B807866A68D46699 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA798FB19885A5BB3614CF7F /* README.md */; };
+		BA798CC92321D13501F4B362 /* UIImage+CKUITools.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798FFB6953EAF1D6BEE673 /* UIImage+CKUITools.m */; };
+		BA798CCB1E7068D1487EDDFD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BA798C04A4DAF97485F9EDDD /* .gitignore */; };
+		BA798DFC0F33901E30C22440 /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798FE7A20E3EC5A3CE3EDF /* UIView+Position.m */; };
+		BA798E06A7623E62642B233E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA798FB19885A5BB3614CF7F /* README.md */; };
+		BA798ED2BB4A3D03DAEAAB17 /* UIImage+CKUITools.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798FFB6953EAF1D6BEE673 /* UIImage+CKUITools.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BD31AF7170C189A007BAF4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD31AC4170C189A007BAF4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BD31ACB170C189A007BAF4F;
+			remoteInfo = bureaucrat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B008FD0170C244A00DB737B /* BCForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCForm.h; sourceTree = "<group>"; };
+		6B008FD1170C244A00DB737B /* BCForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCForm.m; sourceTree = "<group>"; };
+		6B008FD2170C244A00DB737B /* BCFormSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormSection.h; sourceTree = "<group>"; };
+		6B008FD3170C244A00DB737B /* BCFormSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFormSection.m; sourceTree = "<group>"; };
+		6B008FD4170C244A00DB737B /* BCFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormView.h; sourceTree = "<group>"; };
+		6B008FD5170C244A00DB737B /* BCFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFormView.m; sourceTree = "<group>"; };
+		6B008FD7170C244A00DB737B /* UITableView+IndexPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+IndexPaths.h"; sourceTree = "<group>"; };
+		6B008FD8170C244A00DB737B /* UITableView+IndexPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+IndexPaths.m"; sourceTree = "<group>"; };
+		6B008FD9170C244A00DB737B /* UITextField+AbstractFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+AbstractFormCell.h"; sourceTree = "<group>"; };
+		6B008FDA170C244A00DB737B /* UITextField+AbstractFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AbstractFormCell.m"; sourceTree = "<group>"; };
+		6B008FDC170C244A00DB737B /* BCAbstractFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAbstractFormCell.h; sourceTree = "<group>"; };
+		6B008FDD170C244A00DB737B /* BCAbstractFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAbstractFormCell.m; sourceTree = "<group>"; };
+		6B008FDE170C244A00DB737B /* BCFormCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormCellDelegate.h; sourceTree = "<group>"; };
+		6B008FDF170C244A00DB737B /* BCPasswordFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPasswordFormCell.h; sourceTree = "<group>"; };
+		6B008FE0170C244A00DB737B /* BCPasswordFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPasswordFormCell.m; sourceTree = "<group>"; };
+		6B008FE1170C244A00DB737B /* BCTextFieldFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTextFieldFormCell.h; sourceTree = "<group>"; };
+		6B008FE2170C244A00DB737B /* BCTextFieldFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTextFieldFormCell.m; sourceTree = "<group>"; };
+		6B008FE4170C244A00DB737B /* BCAbstractFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAbstractFormField.h; sourceTree = "<group>"; };
+		6B008FE5170C244A00DB737B /* BCAbstractFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAbstractFormField.m; sourceTree = "<group>"; };
+		6B008FE6170C244A00DB737B /* BCPasswordFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPasswordFormField.h; sourceTree = "<group>"; };
+		6B008FE7170C244A00DB737B /* BCPasswordFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPasswordFormField.m; sourceTree = "<group>"; };
+		6B008FE8170C244A00DB737B /* BCPickerFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPickerFormField.h; sourceTree = "<group>"; };
+		6B008FE9170C244A00DB737B /* BCPickerFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPickerFormField.m; sourceTree = "<group>"; };
+		6B008FEA170C244A00DB737B /* BCTextFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTextFormField.h; sourceTree = "<group>"; };
+		6B008FEB170C244A00DB737B /* BCTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTextFormField.m; sourceTree = "<group>"; };
+		6B008FED170C244A00DB737B /* BCFormInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormInputAccessoryView.h; sourceTree = "<group>"; };
+		6B008FEE170C244A00DB737B /* BCFormInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFormInputAccessoryView.m; sourceTree = "<group>"; };
+		6B008FEF170C244A00DB737B /* BCFormInputAccessoryViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormInputAccessoryViewDelegate.h; sourceTree = "<group>"; };
+		6B00900B170C246600DB737B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B00900C170C246600DB737B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B00900D170C246600DB737B /* bureaucrat-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "bureaucrat-Info.plist"; sourceTree = "<group>"; };
+		6B00900E170C246600DB737B /* bureaucrat-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bureaucrat-Prefix.pch"; sourceTree = "<group>"; };
+		6B00900F170C246600DB737B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6B009010170C246600DB737B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6B009011170C246600DB737B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6B009013170C246600DB737B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B009015170C246600DB737B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		6B009016170C246600DB737B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B009017170C246600DB737B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6B009018170C246600DB737B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6B00902B170C460400DB737B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6BD31ACC170C189A007BAF4F /* bureaucrat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bureaucrat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD31ACF170C189A007BAF4F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6BD31AD1170C189A007BAF4F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BD31AD3170C189A007BAF4F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6BD31AF2170C189A007BAF4F /* bureaucratTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bureaucratTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD31AF3170C189A007BAF4F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6BD31AFB170C189A007BAF4F /* bureaucratTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bureaucratTests-Info.plist"; sourceTree = "<group>"; };
+		6BD31AFD170C189A007BAF4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BD31AFF170C189A007BAF4F /* bureaucratTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bureaucratTests.h; sourceTree = "<group>"; };
+		6BD31B00170C189A007BAF4F /* bureaucratTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bureaucratTests.m; sourceTree = "<group>"; };
+		BA79814E37908A342D2A2A00 /* radialGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = radialGeometry.h; sourceTree = "<group>"; };
+		BA79869CCAFB954A3F4C828B /* CALayer+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Image.m"; sourceTree = "<group>"; };
+		BA7989B0D44AA9402192232B /* CALayer+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Image.h"; sourceTree = "<group>"; };
+		BA7989FA20C28FEF7004C9A7 /* randomDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomDouble.h; sourceTree = "<group>"; };
+		BA798B183B0EF16E96E7450E /* UIView+Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Position.h"; sourceTree = "<group>"; };
+		BA798B8098C4509E56FBCCD6 /* randomDouble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = randomDouble.c; sourceTree = "<group>"; };
+		BA798BB4566800FA003FC672 /* UIScreen+CKUITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+CKUITools.m"; sourceTree = "<group>"; };
+		BA798BD2467652C12CEF09D3 /* CKUITools.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = CKUITools.podspec; sourceTree = "<group>"; };
+		BA798C04A4DAF97485F9EDDD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		BA798C18B7033258E3AC32C6 /* UIImage+CKUITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CKUITools.h"; sourceTree = "<group>"; };
+		BA798D39EC6E783D2F6A63CD /* UIScreen+CKUITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+CKUITools.h"; sourceTree = "<group>"; };
+		BA798DB9DB9A6CEDF8267809 /* radialGeometry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = radialGeometry.c; sourceTree = "<group>"; };
+		BA798DBD837D43CBBA125066 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BA798F9588E3259220D7DAD2 /* CKUITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKUITools.h; sourceTree = "<group>"; };
+		BA798FB19885A5BB3614CF7F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
+		BA798FE7A20E3EC5A3CE3EDF /* UIView+Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Position.m"; sourceTree = "<group>"; };
+		BA798FFB6953EAF1D6BEE673 /* UIImage+CKUITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CKUITools.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BD31AC9170C189A007BAF4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B00902C170C460400DB737B /* QuartzCore.framework in Frameworks */,
+				6BD31AD0170C189A007BAF4F /* UIKit.framework in Frameworks */,
+				6BD31AD2170C189A007BAF4F /* Foundation.framework in Frameworks */,
+				6BD31AD4170C189A007BAF4F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BD31AEE170C189A007BAF4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B00902D170C460B00DB737B /* QuartzCore.framework in Frameworks */,
+				6BD31AF4170C189A007BAF4F /* SenTestingKit.framework in Frameworks */,
+				6BD31AF5170C189A007BAF4F /* UIKit.framework in Frameworks */,
+				6BD31AF6170C189A007BAF4F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B008FD6170C244A00DB737B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6B008FD7170C244A00DB737B /* UITableView+IndexPaths.h */,
+				6B008FD8170C244A00DB737B /* UITableView+IndexPaths.m */,
+				6B008FD9170C244A00DB737B /* UITextField+AbstractFormCell.h */,
+				6B008FDA170C244A00DB737B /* UITextField+AbstractFormCell.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		6B008FDB170C244A00DB737B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B008FDC170C244A00DB737B /* BCAbstractFormCell.h */,
+				6B008FDD170C244A00DB737B /* BCAbstractFormCell.m */,
+				6B008FDE170C244A00DB737B /* BCFormCellDelegate.h */,
+				6B008FDF170C244A00DB737B /* BCPasswordFormCell.h */,
+				6B008FE0170C244A00DB737B /* BCPasswordFormCell.m */,
+				6B008FE1170C244A00DB737B /* BCTextFieldFormCell.h */,
+				6B008FE2170C244A00DB737B /* BCTextFieldFormCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6B008FE3170C244A00DB737B /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				6B008FE4170C244A00DB737B /* BCAbstractFormField.h */,
+				6B008FE5170C244A00DB737B /* BCAbstractFormField.m */,
+				6B008FE6170C244A00DB737B /* BCPasswordFormField.h */,
+				6B008FE7170C244A00DB737B /* BCPasswordFormField.m */,
+				6B008FE8170C244A00DB737B /* BCPickerFormField.h */,
+				6B008FE9170C244A00DB737B /* BCPickerFormField.m */,
+				6B008FEA170C244A00DB737B /* BCTextFormField.h */,
+				6B008FEB170C244A00DB737B /* BCTextFormField.m */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
+		6B008FEC170C244A00DB737B /* InputAccessory */ = {
+			isa = PBXGroup;
+			children = (
+				6B008FED170C244A00DB737B /* BCFormInputAccessoryView.h */,
+				6B008FEE170C244A00DB737B /* BCFormInputAccessoryView.m */,
+				6B008FEF170C244A00DB737B /* BCFormInputAccessoryViewDelegate.h */,
+			);
+			path = InputAccessory;
+			sourceTree = "<group>";
+		};
+		6B00900A170C246600DB737B /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				6B00900B170C246600DB737B /* AppDelegate.h */,
+				6B00900C170C246600DB737B /* AppDelegate.m */,
+				6B00900D170C246600DB737B /* bureaucrat-Info.plist */,
+				6B00900E170C246600DB737B /* bureaucrat-Prefix.pch */,
+				6B00900F170C246600DB737B /* Default-568h@2x.png */,
+				6B009010170C246600DB737B /* Default.png */,
+				6B009011170C246600DB737B /* Default@2x.png */,
+				6B009012170C246600DB737B /* InfoPlist.strings */,
+				6B009014170C246600DB737B /* ViewController.xib */,
+				6B009016170C246600DB737B /* main.m */,
+				6B009017170C246600DB737B /* ViewController.h */,
+				6B009018170C246600DB737B /* ViewController.m */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		6BD31AC3170C189A007BAF4F = {
+			isa = PBXGroup;
+			children = (
+				6B00902B170C460400DB737B /* QuartzCore.framework */,
+				6B00900A170C246600DB737B /* Example */,
+				6BD31AD5170C189A007BAF4F /* bureaucrat */,
+				6BD31AF9170C189A007BAF4F /* bureaucratTests */,
+				6BD31ACE170C189A007BAF4F /* Frameworks */,
+				6BD31ACD170C189A007BAF4F /* Products */,
+				BA79890F88A44076139C9495 /* External */,
+			);
+			sourceTree = "<group>";
+		};
+		6BD31ACD170C189A007BAF4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BD31ACC170C189A007BAF4F /* bureaucrat.app */,
+				6BD31AF2170C189A007BAF4F /* bureaucratTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BD31ACE170C189A007BAF4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BD31ACF170C189A007BAF4F /* UIKit.framework */,
+				6BD31AD1170C189A007BAF4F /* Foundation.framework */,
+				6BD31AD3170C189A007BAF4F /* CoreGraphics.framework */,
+				6BD31AF3170C189A007BAF4F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BD31AD5170C189A007BAF4F /* bureaucrat */ = {
+			isa = PBXGroup;
+			children = (
+				6B008FD0170C244A00DB737B /* BCForm.h */,
+				6B008FD1170C244A00DB737B /* BCForm.m */,
+				6B008FD2170C244A00DB737B /* BCFormSection.h */,
+				6B008FD3170C244A00DB737B /* BCFormSection.m */,
+				6B008FD4170C244A00DB737B /* BCFormView.h */,
+				6B008FD5170C244A00DB737B /* BCFormView.m */,
+				6B008FD6170C244A00DB737B /* Categories */,
+				6B008FDB170C244A00DB737B /* Cells */,
+				6B008FE3170C244A00DB737B /* Fields */,
+				6B008FEC170C244A00DB737B /* InputAccessory */,
+			);
+			path = bureaucrat;
+			sourceTree = "<group>";
+		};
+		6BD31AF9170C189A007BAF4F /* bureaucratTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BD31AFF170C189A007BAF4F /* bureaucratTests.h */,
+				6BD31B00170C189A007BAF4F /* bureaucratTests.m */,
+				6BD31AFA170C189A007BAF4F /* Supporting Files */,
+			);
+			path = bureaucratTests;
+			sourceTree = "<group>";
+		};
+		6BD31AFA170C189A007BAF4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BD31AFB170C189A007BAF4F /* bureaucratTests-Info.plist */,
+				6BD31AFC170C189A007BAF4F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA7986972566561FEF04C54E /* CKUITools */ = {
+			isa = PBXGroup;
+			children = (
+				BA798DBD837D43CBBA125066 /* LICENSE */,
+				BA798FB19885A5BB3614CF7F /* README.md */,
+				BA798C04A4DAF97485F9EDDD /* .gitignore */,
+				BA798F9588E3259220D7DAD2 /* CKUITools.h */,
+				BA798B8098C4509E56FBCCD6 /* randomDouble.c */,
+				BA7989FA20C28FEF7004C9A7 /* randomDouble.h */,
+				BA7989B0D44AA9402192232B /* CALayer+Image.h */,
+				BA79869CCAFB954A3F4C828B /* CALayer+Image.m */,
+				BA798DB9DB9A6CEDF8267809 /* radialGeometry.c */,
+				BA79814E37908A342D2A2A00 /* radialGeometry.h */,
+				BA798BD2467652C12CEF09D3 /* CKUITools.podspec */,
+				BA798B183B0EF16E96E7450E /* UIView+Position.h */,
+				BA798FE7A20E3EC5A3CE3EDF /* UIView+Position.m */,
+				BA798C18B7033258E3AC32C6 /* UIImage+CKUITools.h */,
+				BA798FFB6953EAF1D6BEE673 /* UIImage+CKUITools.m */,
+				BA798D39EC6E783D2F6A63CD /* UIScreen+CKUITools.h */,
+				BA798BB4566800FA003FC672 /* UIScreen+CKUITools.m */,
+			);
+			path = CKUITools;
+			sourceTree = "<group>";
+		};
+		BA79890F88A44076139C9495 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				BA7986972566561FEF04C54E /* CKUITools */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BD31ACB170C189A007BAF4F /* bureaucrat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BD31B04170C189A007BAF4F /* Build configuration list for PBXNativeTarget "bureaucrat" */;
+			buildPhases = (
+				6BD31AC8170C189A007BAF4F /* Sources */,
+				6BD31AC9170C189A007BAF4F /* Frameworks */,
+				6BD31ACA170C189A007BAF4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bureaucrat;
+			productName = bureaucrat;
+			productReference = 6BD31ACC170C189A007BAF4F /* bureaucrat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BD31AF1170C189A007BAF4F /* bureaucratTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BD31B07170C189A007BAF4F /* Build configuration list for PBXNativeTarget "bureaucratTests" */;
+			buildPhases = (
+				6BD31AED170C189A007BAF4F /* Sources */,
+				6BD31AEE170C189A007BAF4F /* Frameworks */,
+				6BD31AEF170C189A007BAF4F /* Resources */,
+				6BD31AF0170C189A007BAF4F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BD31AF8170C189A007BAF4F /* PBXTargetDependency */,
+			);
+			name = bureaucratTests;
+			productName = bureaucratTests;
+			productReference = 6BD31AF2170C189A007BAF4F /* bureaucratTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BD31AC4170C189A007BAF4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = com.jasperblues;
+			};
+			buildConfigurationList = 6BD31AC7170C189A007BAF4F /* Build configuration list for PBXProject "bureaucrat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BD31AC3170C189A007BAF4F;
+			productRefGroup = 6BD31ACD170C189A007BAF4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BD31ACB170C189A007BAF4F /* bureaucrat */,
+				6BD31AF1170C189A007BAF4F /* bureaucratTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BD31ACA170C189A007BAF4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B00901D170C246600DB737B /* Default-568h@2x.png in Resources */,
+				6B00901F170C246600DB737B /* Default.png in Resources */,
+				6B009021170C246600DB737B /* Default@2x.png in Resources */,
+				6B009023170C246600DB737B /* InfoPlist.strings in Resources */,
+				6B009025170C246600DB737B /* ViewController.xib in Resources */,
+				BA798697D2CA18597ABB9D33 /* LICENSE in Resources */,
+				BA798C12B807866A68D46699 /* README.md in Resources */,
+				BA7985A6644FA5922D30644F /* .gitignore in Resources */,
+				BA7980A27ADC2FCA96823702 /* CKUITools.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BD31AEF170C189A007BAF4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD31AFE170C189A007BAF4F /* InfoPlist.strings in Resources */,
+				6B00901C170C246600DB737B /* bureaucrat-Info.plist in Resources */,
+				6B00901E170C246600DB737B /* Default-568h@2x.png in Resources */,
+				6B009020170C246600DB737B /* Default.png in Resources */,
+				6B009022170C246600DB737B /* Default@2x.png in Resources */,
+				6B009026170C246600DB737B /* ViewController.xib in Resources */,
+				BA7981F7B778C3A7DB0A22D2 /* LICENSE in Resources */,
+				BA798E06A7623E62642B233E /* README.md in Resources */,
+				BA798CCB1E7068D1487EDDFD /* .gitignore in Resources */,
+				BA7980FABCD81B69803B8F90 /* CKUITools.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BD31AF0170C189A007BAF4F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BD31AC8170C189A007BAF4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B008FF0170C244A00DB737B /* BCForm.m in Sources */,
+				6B008FF2170C244A00DB737B /* BCFormSection.m in Sources */,
+				6B008FF4170C244A00DB737B /* BCFormView.m in Sources */,
+				6B008FF6170C244A00DB737B /* UITableView+IndexPaths.m in Sources */,
+				6B008FF8170C244A00DB737B /* UITextField+AbstractFormCell.m in Sources */,
+				6B008FFA170C244A00DB737B /* BCAbstractFormCell.m in Sources */,
+				6B008FFC170C244A00DB737B /* BCPasswordFormCell.m in Sources */,
+				6B008FFE170C244A00DB737B /* BCTextFieldFormCell.m in Sources */,
+				6B009000170C244A00DB737B /* BCAbstractFormField.m in Sources */,
+				6B009002170C244A00DB737B /* BCPasswordFormField.m in Sources */,
+				6B009004170C244A00DB737B /* BCPickerFormField.m in Sources */,
+				6B009006170C244A00DB737B /* BCTextFormField.m in Sources */,
+				6B009008170C244A00DB737B /* BCFormInputAccessoryView.m in Sources */,
+				6B009019170C246600DB737B /* AppDelegate.m in Sources */,
+				6B009027170C246600DB737B /* main.m in Sources */,
+				6B009029170C246600DB737B /* ViewController.m in Sources */,
+				BA79864FD5FAC725703B469A /* randomDouble.c in Sources */,
+				BA7980566982CDF4626597BB /* CALayer+Image.m in Sources */,
+				BA798939FDD7D2678D8B15A7 /* radialGeometry.c in Sources */,
+				BA798DFC0F33901E30C22440 /* UIView+Position.m in Sources */,
+				BA798ED2BB4A3D03DAEAAB17 /* UIImage+CKUITools.m in Sources */,
+				BA7985427BEEDD29758E28B8 /* UIScreen+CKUITools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BD31AED170C189A007BAF4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD31B01170C189A007BAF4F /* bureaucratTests.m in Sources */,
+				6B008FF1170C244A00DB737B /* BCForm.m in Sources */,
+				6B008FF3170C244A00DB737B /* BCFormSection.m in Sources */,
+				6B008FF5170C244A00DB737B /* BCFormView.m in Sources */,
+				6B008FF7170C244A00DB737B /* UITableView+IndexPaths.m in Sources */,
+				6B008FF9170C244A00DB737B /* UITextField+AbstractFormCell.m in Sources */,
+				6B008FFB170C244A00DB737B /* BCAbstractFormCell.m in Sources */,
+				6B008FFD170C244A00DB737B /* BCPasswordFormCell.m in Sources */,
+				6B008FFF170C244A00DB737B /* BCTextFieldFormCell.m in Sources */,
+				6B009001170C244A00DB737B /* BCAbstractFormField.m in Sources */,
+				6B009003170C244A00DB737B /* BCPasswordFormField.m in Sources */,
+				6B009005170C244A00DB737B /* BCPickerFormField.m in Sources */,
+				6B009007170C244A00DB737B /* BCTextFormField.m in Sources */,
+				6B009009170C244A00DB737B /* BCFormInputAccessoryView.m in Sources */,
+				6B00901A170C246600DB737B /* AppDelegate.m in Sources */,
+				6B00902A170C246600DB737B /* ViewController.m in Sources */,
+				BA7983C796DE5F729420CD28 /* randomDouble.c in Sources */,
+				BA7986C1B02C1076C97C53F6 /* CALayer+Image.m in Sources */,
+				BA79835E276782AA24CEFFBC /* radialGeometry.c in Sources */,
+				BA7986F0572F83BDB641B78D /* UIView+Position.m in Sources */,
+				BA798CC92321D13501F4B362 /* UIImage+CKUITools.m in Sources */,
+				BA798A7072EED4E09D2B494F /* UIScreen+CKUITools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BD31AF8170C189A007BAF4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BD31ACB170C189A007BAF4F /* bureaucrat */;
+			targetProxy = 6BD31AF7170C189A007BAF4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B009012170C246600DB737B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B009013170C246600DB737B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6B009014170C246600DB737B /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B009015170C246600DB737B /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		6BD31AFC170C189A007BAF4F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BD31AFD170C189A007BAF4F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BD31B02170C189A007BAF4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6BD31B03170C189A007BAF4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BD31B05170C189A007BAF4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/bureaucrat-Prefix.pch";
+				INFOPLIST_FILE = "Example/bureaucrat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6BD31B06170C189A007BAF4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/bureaucrat-Prefix.pch";
+				INFOPLIST_FILE = "Example/bureaucrat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6BD31B08170C189A007BAF4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/bureaucrat.app/bureaucrat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bureaucrat/bureaucrat-Prefix.pch";
+				INFOPLIST_FILE = "bureaucratTests/bureaucratTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6BD31B09170C189A007BAF4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/bureaucrat.app/bureaucrat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bureaucrat/bureaucrat-Prefix.pch";
+				INFOPLIST_FILE = "bureaucratTests/bureaucratTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BD31AC7170C189A007BAF4F /* Build configuration list for PBXProject "bureaucrat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BD31B02170C189A007BAF4F /* Debug */,
+				6BD31B03170C189A007BAF4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BD31B04170C189A007BAF4F /* Build configuration list for PBXNativeTarget "bureaucrat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BD31B05170C189A007BAF4F /* Debug */,
+				6BD31B06170C189A007BAF4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BD31B07170C189A007BAF4F /* Build configuration list for PBXNativeTarget "bureaucratTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BD31B08170C189A007BAF4F /* Debug */,
+				6BD31B09170C189A007BAF4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BD31AC4170C189A007BAF4F /* Project object */;
+}

@@ -58,6 +58,7 @@
     if (_currentlyEditingCell)
     {
         [self scrollToAccommodateCell:_currentlyEditingCell];
+        _currentlyEditingCell.textField.inputAccessoryView = _formNavigationAccessory;
     }
 }
 
@@ -113,7 +114,6 @@
     [_currentlyEditingCell setFocused:NO];
     [_currentlyEditingField resignFirstResponder];
     [_tableView deselectRowAtIndexPath:_selectedIndexPath animated:NO];
-    [self hideNavigationAccessory];
     if (_currentScrollAmount != 0)
     {
         [self scrollByAmount:-_currentScrollAmount];
@@ -202,7 +202,6 @@
 {
     [_currentlyEditingCell setFocused:NO];
     [tableView endEditing:YES];
-    [self showNavigationAccessory];
     if ([indexPath compare:_selectedIndexPath] == NSOrderedSame)
     {
         [self scrollToAccommodateCell:_currentlyEditingCell];
@@ -259,17 +258,6 @@
 
 
 /* ====================================================================================================================================== */
-- (void)showNavigationAccessory
-{
-    [_formNavigationAccessory setFrame:[self navigationAccessoryFrame]];
-    [self addSubview:_formNavigationAccessory];
-}
-
-- (void)hideNavigationAccessory
-{
-    [_formNavigationAccessory removeFromSuperview];
-}
-
 - (CGSize)keyboardSize;
 {
     //TODO: Handle interface orientations and idioms (ie iPad vs iPhone)
@@ -288,12 +276,6 @@
     CGSize keyboardSize = [self keyboardSize];
     CGRect frame = CGRectMake(0, self.height, self.width, keyboardSize.height);
     return frame;
-}
-
-- (CGRect)navigationAccessoryFrame
-{
-    CGRect keyboardFrame = [self onScreenKeyboardFrame];
-    return CGRectMake(0, keyboardFrame.origin.y - _formNavigationAccessory.size.height, self.width, _formNavigationAccessory.height);
 }
 
 

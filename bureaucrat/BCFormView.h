@@ -39,8 +39,6 @@
 @property (nonatomic, strong) UIView* backgroundView;
 
 
-- (CGRect)navigationAccessoryFrame;
-
 - (CGRect)onScreenKeyboardFrame;
 
 @end

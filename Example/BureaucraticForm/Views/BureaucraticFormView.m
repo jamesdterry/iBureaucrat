@@ -25,8 +25,8 @@
     if (self)
     {
         [self initBackground];
-        [self initNavigationBar];
         [self initFormView];
+        [self initNavigationBar];
     }
     return self;
 }

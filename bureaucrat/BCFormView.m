@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
+#include <CoreGraphics/CoreGraphics.h>
 #import "BCFormView.h"
 #import "BCFormInputAccessoryView.h"
 #import "BCFormSection.h"
@@ -35,6 +36,7 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        [self setClipsToBounds:YES];
         [self initContentView];
         [self initTableView];
         [self initKeyboardAccessory];
@@ -288,10 +290,12 @@
 
 - (void)scrollToAccommodateCell:(BCAbstractFormCell*)cell
 {
-    CGFloat y = cell.position.y;
+    CGPoint position = [self convertPoint:cell.position toView:nil];
+    NSLog(@"Position: %@", NSStringFromCGPoint(position));
+    CGFloat y = position.y;
     CGRect keyboardFrame = [self onScreenKeyboardFrame];
     CGFloat scrollAmount = 0;
-    CGFloat visibleY = keyboardFrame.origin.y - _formNavigationAccessory.height - cell.height - 70;
+    CGFloat visibleY = self.height - keyboardFrame.size.height;
     if (y > visibleY)
     {
         scrollAmount = visibleY - y;

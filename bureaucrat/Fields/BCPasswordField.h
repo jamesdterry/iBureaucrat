@@ -11,14 +11,9 @@
 
 
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "BCTextField.h"
 
-@class BureaucraticFormViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) BureaucraticFormViewController*viewController;
-
+@interface BCPasswordField : BCTextField
 @end

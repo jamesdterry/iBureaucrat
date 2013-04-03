@@ -11,14 +11,14 @@
 
 
 
-#import "BCPasswordFormField.h"
+#import "BCPasswordField.h"
 #import "BCTextFieldFormCell.h"
 #import "BCPasswordFormCell.h"
 #import "UITextField+AbstractFormCell.h"
 #import "CKUITools.h"
 
 
-@implementation BCPasswordFormField
+@implementation BCPasswordField
 
 - (BCAbstractFormCell*)createCellInstance;
 {

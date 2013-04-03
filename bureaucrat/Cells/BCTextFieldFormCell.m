@@ -13,7 +13,7 @@
 
 
 #import "BCTextFieldFormCell.h"
-#import "BCAbstractFormField.h"
+#import "BCAbstractField.h"
 #import "CKUITools.h"
 
 

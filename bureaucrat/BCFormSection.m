@@ -12,7 +12,7 @@
 
 
 #import "BCFormSection.h"
-#import "BCAbstractFormField.h"
+#import "BCAbstractField.h"
 #import "BCForm.h"
 
 
@@ -52,7 +52,7 @@
     return [_fields copy];
 }
 
-- (void)addField:(BCAbstractFormField*)field
+- (void)addField:(BCAbstractField*)field
 {
     [field setSection:self];
     [_fields addObject:field];
@@ -60,7 +60,7 @@
 
 - (void)addFields:(NSArray*)fields
 {
-    for (BCAbstractFormField* field in fields)
+    for (BCAbstractField* field in fields)
     {
         [self addField:field];
     }

@@ -12,7 +12,7 @@
 
 #import "BCAbstractFormCell.h"
 #import "BCFormCellDelegate.h"
-#import "BCAbstractFormField.h"
+#import "BCAbstractField.h"
 
 
 @implementation BCAbstractFormCell

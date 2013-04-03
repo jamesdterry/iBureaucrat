@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "BCTextFormField.h"
+#import "BCTextField.h"
 #import "BCTextFieldFormCell.h"
 #import "BCFormInputAccessoryView.h"
 #import "BCFormSection.h"
@@ -20,7 +20,7 @@
 #import "CKUITools.h"
 
 
-@implementation BCTextFormField
+@implementation BCTextField
 
 
 - (UITextField*)textField

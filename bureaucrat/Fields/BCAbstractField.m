@@ -12,10 +12,10 @@
 
 
 #import "BCTextFieldFormCell.h"
-#import "BCTextFormField.h"
+#import "BCTextField.h"
 #import "BCFormSection.h"
 
-@implementation BCAbstractFormField
+@implementation BCAbstractField
 
 /* =========================================================== Class Methods ============================================================ */
 + (id)fieldWithLabel:(NSString*)label
@@ -65,7 +65,7 @@
 - (void)setEditable:(BOOL)editable
 {
     _editable = editable;
-    [(BCTextFormField*) self.cell setEditable:_editable];
+    [(BCTextField*) self.cell setEditable:_editable];
 }
 
 /* ====================================================================================================================================== */

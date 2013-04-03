@@ -10,10 +10,17 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-
 #import <Foundation/Foundation.h>
-#import "BCTextFormField.h"
+
+@class BCFormView;
 
 
-@interface BCPasswordFormField : BCTextFormField
+@interface BureaucraticFormView : UIView
+{
+    UIImageView* _backgroundView;
+    UINavigationBar* _navigationBar;
+}
+
+@property (nonatomic, strong, readonly) BCFormView* formView;
+
 @end

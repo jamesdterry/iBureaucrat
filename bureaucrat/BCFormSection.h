@@ -14,7 +14,7 @@
 #import <Foundation/Foundation.h>
 
 @class BCFormView;
-@class BCAbstractFormField;
+@class BCAbstractField;
 @class BCForm;
 
 
@@ -68,7 +68,7 @@
 
 - (NSArray*)fields;
 
-- (void)addField:(BCAbstractFormField*)field;
+- (void)addField:(BCAbstractField*)field;
 
 - (void)addFields:(NSArray*)fields;
 

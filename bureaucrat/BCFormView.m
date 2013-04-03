@@ -15,7 +15,7 @@
 #import "BCFormSection.h"
 #import "UITableView+IndexPaths.h"
 #import "BCAbstractFormCell.h"
-#import "BCAbstractFormField.h"
+#import "BCAbstractField.h"
 #import "UITextField+AbstractFormCell.h"
 #import "BCForm.h"
 #import "CKUITools.h"
@@ -74,10 +74,8 @@
     }
 
     _backgroundView.frame = _contentView.bounds;
-
-    _tableView.width = self.width - 20;
-    _tableView.position = (CGPoint) {(_contentView.width - _tableView.width) / 2, 60};
-    _tableView.height = _contentView.height - _tableView.y - 20;
+    //TODO: Add sizing for table view
+    _tableView.frame = _contentView.bounds;
 }
 
 - (void)setBackgroundView:(UIView*)backgroundView
@@ -179,7 +177,7 @@
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     BCFormSection* section = [_form.sections objectAtIndex:indexPath.section];
-    BCAbstractFormField* field = [[section fields] objectAtIndex:indexPath.row];
+    BCAbstractField* field = [[section fields] objectAtIndex:indexPath.row];
     BCAbstractFormCell* cell = [field cell];
     cell.indexPath = indexPath;
     BOOL focused = (_selectedIndexPath != nil && [_selectedIndexPath compare:indexPath] == NSOrderedSame);

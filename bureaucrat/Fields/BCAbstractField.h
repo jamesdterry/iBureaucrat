@@ -19,7 +19,7 @@
 @class BCFormSection;
 
 
-@interface BCAbstractFormField : NSObject<BCFormCellDelegate>
+@interface BCAbstractField : NSObject<BCFormCellDelegate>
 {
     BCAbstractFormCell* _cell;
 

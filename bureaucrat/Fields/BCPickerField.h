@@ -12,14 +12,22 @@
 
 
 #import <Foundation/Foundation.h>
-#import "BCAbstractFormField.h"
+#import "BCAbstractField.h"
 
 @class BCTextFieldFormCell;
-@class BCFormSection;
 
-@interface BCTextFormField : BCAbstractFormField <UITextFieldDelegate>
 
-@property(nonatomic, strong, readonly) UITextField* textField;
+@interface BCPickerField : BCAbstractField <UIPickerViewDelegate, UIPickerViewDataSource>
+{
+    UIPickerView* _pickerView;
+    NSMutableArray* _options;
+    BOOL _hasValue;
+}
 
+- (BCTextFieldFormCell*)cell;
+
+- (void)addOption:(NSString*)option;
+
+- (void)addOptions:(NSArray*)options;
 
 @end

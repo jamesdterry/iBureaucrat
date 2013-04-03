@@ -15,19 +15,19 @@
 #import <Foundation/Foundation.h>
 
 @protocol BCFormCellDelegate;
-@class BCAbstractFormField;
+@class BCAbstractField;
 
 
 @interface BCAbstractFormCell : UITableViewCell
 {
-    __weak BCAbstractFormField* _field;
+    __weak BCAbstractField* _field;
 }
 
 
 @property(nonatomic, strong) NSIndexPath* indexPath;
 
 @property (nonatomic, weak) id<BCFormCellDelegate>delegate;
-@property (nonatomic, weak) BCAbstractFormField* field;
+@property (nonatomic, weak) BCAbstractField* field;
 
 
 - (void)setFocused:(BOOL)focused;

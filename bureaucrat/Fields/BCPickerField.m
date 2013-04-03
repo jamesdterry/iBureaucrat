@@ -11,7 +11,7 @@
 
 
 
-#import "BCPickerFormField.h"
+#import "BCPickerField.h"
 #import "BCAbstractFormCell.h"
 #import "BCFormInputAccessoryView.h"
 #import "BCTextFieldFormCell.h"
@@ -21,7 +21,7 @@
 #import "CKUITools.h"
 
 
-@implementation BCPickerFormField
+@implementation BCPickerField
 
 /* ============================================================ Initializers ============================================================ */
 - (id)initWithLabel:(NSString*)label cellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor

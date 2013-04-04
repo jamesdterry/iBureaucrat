@@ -23,7 +23,7 @@
 - (BCAbstractFormCell*)createCellInstance;
 {
     BCPasswordFormCell* cell = [[BCPasswordFormCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    [cell.label setText:@"Country code"];
+    [cell.label setText:self.label];
     cell.label.width = 100;
     cell.textField.returnKeyType = UIReturnKeyDefault;
     cell.textField.delegate = self;

@@ -24,12 +24,26 @@
     BOOL _hasValue;
 }
 
+/**
+* The field used to display an option value - must return an NSString. If this value is nil, 'description' will be used.
+*/
+@property (nonatomic) SEL displayField;
+
 - (BCTextFieldFormCell*)cell;
 
-- (void)addOption:(NSString*)option;
+/**
+* Adds an option.
+*/
+- (void)addOption:(id<NSObject>*)option;
 
+/**
+* Adds options.
+*/
 - (void)addOptions:(NSArray*)options;
 
+/**
+* Sets options to the contents of the supplied array (erasing any previous options).
+*/
 - (void)setOptions:(NSArray*)options;
 
 @end

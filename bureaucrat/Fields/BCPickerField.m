@@ -18,7 +18,6 @@
 #import "BCFormSection.h"
 #import "BCFormView.h"
 #import "BCForm.h"
-#import "CKUITools.h"
 
 
 @implementation BCPickerField
@@ -37,7 +36,9 @@
 }
 
 /* ========================================================== Interface Methods ========================================================= */
-- (void)addOption:(NSString*)option
+
+
+- (void)addOption:(id<NSObject>)option
 {
     [_options addObject:option];
 }

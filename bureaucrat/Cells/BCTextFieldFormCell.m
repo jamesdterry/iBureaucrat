@@ -38,6 +38,7 @@
 - (void)dealloc
 {
     [_textField removeObserver:self forKeyPath:@"text"];
+    [_textField removeObserver:self forKeyPath:@"textColor"];
 }
 
 /* ========================================================== Interface Methods ========================================================= */

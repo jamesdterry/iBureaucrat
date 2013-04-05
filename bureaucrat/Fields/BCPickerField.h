@@ -30,4 +30,6 @@
 
 - (void)addOptions:(NSArray*)options;
 
+- (void)setOptions:(NSArray*)options;
+
 @end

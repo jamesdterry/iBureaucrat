@@ -11,7 +11,7 @@
 
 
 #import "BCTextField.h"
-#import "BCTextFieldFormCell.h"
+#import "BCTextFieldCell.h"
 #import "BCFormInputAccessoryView.h"
 #import "BCFormSection.h"
 #import "BCFormView.h"
@@ -31,9 +31,9 @@
 /* ====================================================================================================================================== */
 #pragma mark - Override
 
-- (BCAbstractFormCell*)createCellInstance;
+- (BCAbstractCell*)createCellInstance;
 {
-    BCTextFieldFormCell* cell = [[BCTextFieldFormCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    BCTextFieldCell* cell = [[BCTextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     [cell.label setText:self.label];
     cell.label.width = 100;
     cell.textField.returnKeyType = UIReturnKeyDefault;
@@ -58,7 +58,7 @@
     self.cell.textField.inputAccessoryView = inputAccessoryView;
 }
 
-- (void)formCellWasFocused:(BCAbstractFormCell*)cell
+- (void)formCellWasFocused:(BCAbstractCell*)cell
 {
     [super formCellWasFocused:cell];
 }

@@ -15,7 +15,7 @@
 @class BCPickerField;
 @class BCTextField;
 
-@interface BureaucraticFormViewController : UIViewController
+@interface FundsTransferViewController : UIViewController
 
 @property (nonatomic, strong, readonly) BCPickerField* countryCode;
 @property (nonatomic, strong, readonly) BCTextField* mobileId;

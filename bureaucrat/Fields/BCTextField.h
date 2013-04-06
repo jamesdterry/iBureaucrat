@@ -14,12 +14,13 @@
 #import <Foundation/Foundation.h>
 #import "BCAbstractField.h"
 
-@class BCTextFieldFormCell;
+@class BCTextFieldCell;
 @class BCFormSection;
 
 @interface BCTextField : BCAbstractField <UITextFieldDelegate>
 
 @property(nonatomic, strong, readonly) UITextField* textField;
 
+- (void)setValue:(NSString*)value;
 
 @end

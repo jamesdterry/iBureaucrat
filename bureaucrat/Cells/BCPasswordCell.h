@@ -10,17 +10,17 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
+
+
 #import <Foundation/Foundation.h>
+#import "BCTextFieldCell.h"
 
-@class BCFormView;
 
-
-@interface BureaucraticFormView : UIView
+@interface BCPasswordCell : BCTextFieldCell
 {
-    UIImageView* _backgroundView;
-    UINavigationBar* _navigationBar;
+    UIImageView* _checker;
 }
 
-@property (nonatomic, strong, readonly) BCFormView* formView;
+- (void)setAuthenticated:(BOOL)authenticated;
 
 @end

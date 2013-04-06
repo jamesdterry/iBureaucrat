@@ -13,12 +13,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class BureaucraticFormViewController;
+@class FundsTransferViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) BureaucraticFormViewController*viewController;
+@property (strong, nonatomic) FundsTransferViewController*viewController;
 
 @end

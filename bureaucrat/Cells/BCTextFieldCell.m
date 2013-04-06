@@ -12,12 +12,12 @@
 
 
 
-#import "BCTextFieldFormCell.h"
+#import "BCTextFieldCell.h"
 #import "BCAbstractField.h"
 #import "CKUITools.h"
 
 
-@implementation BCTextFieldFormCell
+@implementation BCTextFieldCell
 
 /* ============================================================ Initializers ============================================================ */
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier
@@ -88,7 +88,6 @@
     [super setFocused:focused];
     if (focused)
     {
-        [_textField performSelectorOnMainThread:@selector(becomeFirstResponder) withObject:nil waitUntilDone:NO];
         [_label setTextColor:_field.selectedTextColor];
         [_textField setTextColor:_field.selectedTextColor];
         if (_editable)

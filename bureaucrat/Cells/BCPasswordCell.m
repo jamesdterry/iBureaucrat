@@ -11,11 +11,11 @@
 
 
 
-#import "BCPasswordFormCell.h"
+#import "BCPasswordCell.h"
 #import "CKUITools.h"
 
 
-@implementation BCPasswordFormCell
+@implementation BCPasswordCell
 
 /* ============================================================ Initializers ============================================================ */
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier

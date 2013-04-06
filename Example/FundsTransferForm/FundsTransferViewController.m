@@ -10,39 +10,39 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "BureaucraticFormViewController.h"
-#import "BureaucraticFormView.h"
+#import "FundsTransferViewController.h"
+#import "FundsTransferView.h"
 #import "BCTextField.h"
 #import "BCFormSection.h"
 #import "BCPickerField.h"
 #import "BCForm.h"
 #import "BCFormView.h"
+#import "Vehicle.h"
 
-@interface BureaucraticFormViewController ()
+@interface FundsTransferViewController ()
 
 @end
 
-@implementation BureaucraticFormViewController
+@implementation FundsTransferViewController
 
 - (void)loadView
 {
-    self.view = [[BureaucraticFormView alloc] initWithFrame:CGRectZero];
+    self.view = [[FundsTransferView alloc] initWithFrame:CGRectZero];
 }
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    BureaucraticFormView* view = (BureaucraticFormView*) self.view;
+    FundsTransferView* view = (FundsTransferView*) self.view;
 
     BCForm* form = [BCForm new]; //Using default colors.
-    BCFormSection* destinationPhoneSection = [form addSection:[BCFormSection sectionWithTitle:@"Destination Mobile"]];
+    BCFormSection* destinationPhoneSection = [form addSection:[BCFormSection sectionWithTitle:@"Transport Details"]];
 
-    _countryCode = [BCPickerField fieldWithLabel:@"Country Code"];
-    [_countryCode addOption:@"+1 USA"];
-    [_countryCode addOption:@"+41 Switzerland"];
-    [_countryCode addOption:@"+44 United Kingdom"];
-    [_countryCode addOption:@"+60 Malaysia"];
+    _countryCode = [BCPickerField fieldWithLabel:@"Send by"];
+    [_countryCode addOption:[Vehicle vehicleWithName:@"Horse" traits:@"grain tax"]];
+    [_countryCode addOption:[Vehicle vehicleWithName:@"Scoundrel" traits:@"reliable"]];
+    [_countryCode addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
 
     _mobileId = [BCTextField fieldWithLabel:@"Number"];
     _mobileId.textField.keyboardType = UIKeyboardTypePhonePad;

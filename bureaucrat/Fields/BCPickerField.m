@@ -12,12 +12,10 @@
 
 
 #import "BCPickerField.h"
-#import "BCAbstractFormCell.h"
-#import "BCFormInputAccessoryView.h"
-#import "BCTextFieldFormCell.h"
-#import "BCFormSection.h"
-#import "BCFormView.h"
-#import "BCForm.h"
+#import "BCAbstractCell.h"
+#import "BCTextFieldCell.h"
+#import "CKUITools.h"
+#import <objc/message.h>
 
 
 @implementation BCPickerField
@@ -38,14 +36,14 @@
 /* ========================================================== Interface Methods ========================================================= */
 
 
-- (void)addOption:(id<NSObject>)option
+- (void)addOption:(id <NSObject>)option
 {
     [_options addObject:option];
 }
 
 - (void)addOptions:(NSArray*)options
 {
-    for (NSString* option in options)
+    for (id <NSObject> option in options)
     {
         [self addOption:option];
     }
@@ -60,9 +58,9 @@
 /* ====================================================================================================================================== */
 #pragma mark Override
 
-- (BCAbstractFormCell*)createCellInstance
+- (BCAbstractCell*)createCellInstance
 {
-    BCTextFieldFormCell* cell = [[BCTextFieldFormCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    BCTextFieldCell* cell = [[BCTextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     cell.editable = NO;
     [cell.label setText:self.label];
     cell.label.width = 100;
@@ -73,9 +71,9 @@
     return cell;
 }
 
-- (BCTextFieldFormCell*)cell
+- (BCTextFieldCell*)cell
 {
-    return (BCTextFieldFormCell*) [super cell];
+    return (BCTextFieldCell*) [super cell];
 }
 
 - (NSString*)textValue
@@ -83,31 +81,34 @@
     return self.cell.textField.text;
 }
 
-- (void)setValue:(NSString*)value
+- (void)setValue:(id <NSObject>)value
 {
-    self.cell.textField.text = value;
+    NSUInteger row = [_options indexOfObject:value];
+    [self pickerView:_pickerView didSelectRow:row inComponent:0];
 }
 
-- (void)setInputAccessoryView:(BCFormInputAccessoryView*)inputAccessoryView
-{
-    self.cell.textField.inputAccessoryView = inputAccessoryView;
-}
-
-- (void)formCellWasFocused:(BCAbstractFormCell*)cell
+- (void)formCellWasFocused:(BCAbstractCell*)cell
 {
     [super formCellWasFocused:cell];
-    if (!_hasValue)
+    if (!_hasValue && [_options count] > 0)
     {
         [self setValue:[_options objectAtIndex:0]];
         _hasValue = YES;
     }
-    _pickerView.frame = [self.section.parent.view onScreenKeyboardFrame];
-    [cell.textField becomeFirstResponder];
+    cell.textField.delegate = self;
+    cell.textField.inputView = _pickerView;
+    [cell.textField performSelectorOnMainThread:@selector(becomeFirstResponder) withObject:nil waitUntilDone:YES];
 }
 
-- (void)formCellLostFocus:(BCAbstractFormCell*)cell
+- (void)formCellLostFocus:(BCAbstractCell*)cell
 {
     [super formCellLostFocus:cell];
+}
+
+/* ====================================================================================================================================== */
+- (void)textFieldDidBeginEditing:(UITextField*)textField
+{
+
 }
 
 
@@ -116,7 +117,7 @@
 
 - (void)pickerView:(UIPickerView*)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSString* selected = [_options objectAtIndex:row];
+    NSString* selected = [self displayValueFor:[_options objectAtIndex:row]];
     self.cell.textField.text = selected;
 }
 
@@ -134,7 +135,7 @@
 
 - (NSString*)pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [_options objectAtIndex:row];
+    return [self displayValueFor:[_options objectAtIndex:row]];
 }
 
 
@@ -151,6 +152,13 @@
     _pickerView.delegate = self;
     _pickerView.dataSource = self;
     _pickerView.showsSelectionIndicator = YES;
+}
+
+- (NSString*)displayValueFor:(id <NSObject>)value
+{
+    SEL displayFieldSelector = _displayField == nil ? @selector(description) : _displayField;
+    NSString* displayValue = objc_msgSend(value, displayFieldSelector);
+    return displayValue;
 }
 
 

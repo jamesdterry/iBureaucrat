@@ -15,14 +15,14 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-@class BCAbstractFormCell;
+@class BCAbstractCell;
 
 @interface UITextField (AbstractFormCell)
 
 
-- (BCAbstractFormCell*)formCell;
+- (BCAbstractCell*)formCell;
 
-- (void)setFormCell:(BCAbstractFormCell*)formCell;
+- (void)setFormCell:(BCAbstractCell*)formCell;
 
 
 @end

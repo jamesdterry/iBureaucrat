@@ -15,7 +15,7 @@
 
 @class BCFormInputAccessoryView;
 @class BCFormSection;
-@class BCAbstractFormCell;
+@class BCAbstractCell;
 @class BCForm;
 
 
@@ -30,7 +30,7 @@
 
     NSIndexPath* _selectedIndexPath;
     UITextField* _currentlyEditingField;
-    BCAbstractFormCell* _currentlyEditingCell;
+    BCAbstractCell* _currentlyEditingCell;
 }
 
 @property (nonatomic, strong, readonly) UIView* contentView;

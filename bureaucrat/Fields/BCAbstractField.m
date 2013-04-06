@@ -11,7 +11,7 @@
 
 
 
-#import "BCTextFieldFormCell.h"
+#import "BCTextFieldCell.h"
 #import "BCTextField.h"
 #import "BCFormSection.h"
 
@@ -51,7 +51,7 @@
 }
 
 /* ========================================================== Interface Methods ========================================================= */
-- (BCAbstractFormCell*)cell
+- (BCAbstractCell*)cell
 {
     if (_cell == nil)
     {
@@ -106,7 +106,7 @@
 /* ====================================================================================================================================== */
 #pragma mark - Abstract methods
 
-- (BCAbstractFormCell*)createCellInstance
+- (BCAbstractCell*)createCellInstance
 {
     return nil;
 }
@@ -116,7 +116,7 @@
     return nil;
 }
 
-- (void)setValue:(NSString*)value
+- (void)setValue:(id<NSObject>)value
 {
 
 }
@@ -131,12 +131,12 @@
 
 }
 
-- (void)formCellWasFocused:(BCAbstractFormCell*)cell
+- (void)formCellWasFocused:(BCAbstractCell*)cell
 {
 
 }
 
-- (void)formCellLostFocus:(BCAbstractFormCell*)cell
+- (void)formCellLostFocus:(BCAbstractCell*)cell
 {
 
 }

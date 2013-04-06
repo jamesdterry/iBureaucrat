@@ -11,12 +11,12 @@
 
 
 
-#import "BureaucraticFormView.h"
+#import "FundsTransferView.h"
 #import "BCFormView.h"
 #import "CKUITools.h"
 
 
-@implementation BureaucraticFormView
+@implementation FundsTransferView
 
 /* ============================================================ Initializers ============================================================ */
 - (id)initWithFrame:(CGRect)frame

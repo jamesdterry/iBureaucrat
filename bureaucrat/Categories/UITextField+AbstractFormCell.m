@@ -12,19 +12,19 @@
 
 
 #import "UITextField+AbstractFormCell.h"
-#import "BCAbstractFormCell.h"
+#import "BCAbstractCell.h"
 
 static char const* const formCellKey;
 
 @implementation UITextField (AbstractFormCell)
 
-- (BCAbstractFormCell*)formCell
+- (BCAbstractCell*)formCell
 {
     return objc_getAssociatedObject(self, &formCellKey);
 }
 
 
-- (void)setFormCell:(BCAbstractFormCell*)formCell
+- (void)setFormCell:(BCAbstractCell*)formCell
 {
     objc_setAssociatedObject(self, &formCellKey, formCell, OBJC_ASSOCIATION_ASSIGN);
 }

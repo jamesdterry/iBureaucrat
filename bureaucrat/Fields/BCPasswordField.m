@@ -12,17 +12,17 @@
 
 
 #import "BCPasswordField.h"
-#import "BCTextFieldFormCell.h"
-#import "BCPasswordFormCell.h"
+#import "BCTextFieldCell.h"
+#import "BCPasswordCell.h"
 #import "UITextField+AbstractFormCell.h"
 #import "CKUITools.h"
 
 
 @implementation BCPasswordField
 
-- (BCAbstractFormCell*)createCellInstance;
+- (BCAbstractCell*)createCellInstance;
 {
-    BCPasswordFormCell* cell = [[BCPasswordFormCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    BCPasswordCell* cell = [[BCPasswordCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     [cell.label setText:self.label];
     cell.label.width = 100;
     cell.textField.returnKeyType = UIReturnKeyDefault;

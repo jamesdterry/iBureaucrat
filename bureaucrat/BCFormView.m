@@ -15,7 +15,7 @@
 #import "BCFormInputAccessoryView.h"
 #import "BCFormSection.h"
 #import "UITableView+IndexPaths.h"
-#import "BCAbstractFormCell.h"
+#import "BCAbstractCell.h"
 #import "BCAbstractField.h"
 #import "UITextField+AbstractFormCell.h"
 #import "BCForm.h"
@@ -23,7 +23,7 @@
 
 @interface BCFormView ()
 
-@property(nonatomic, strong) BCAbstractFormCell* currentlyEditingCell;
+@property(nonatomic, strong) BCAbstractCell* currentlyEditingCell;
 
 @end
 
@@ -54,7 +54,7 @@
 //    [[NSNotificationCenter defaultCenter] notifyColorsChanged];
 }
 
-- (void)setCurrentlyEditingCell:(BCAbstractFormCell*)currentlyEditingCell
+- (void)setCurrentlyEditingCell:(BCAbstractCell*)currentlyEditingCell
 {
     _currentlyEditingCell = currentlyEditingCell;
     if (_currentlyEditingCell)
@@ -180,7 +180,7 @@
 {
     BCFormSection* section = [_form.sections objectAtIndex:indexPath.section];
     BCAbstractField* field = [[section fields] objectAtIndex:indexPath.row];
-    BCAbstractFormCell* cell = [field cell];
+    BCAbstractCell* cell = [field cell];
     cell.indexPath = indexPath;
     BOOL focused = (_selectedIndexPath != nil && [_selectedIndexPath compare:indexPath] == NSOrderedSame);
 
@@ -202,11 +202,12 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    [_currentlyEditingCell setFocused:NO];
     [tableView endEditing:YES];
     if ([indexPath compare:_selectedIndexPath] == NSOrderedSame)
     {
         [self scrollToAccommodateCell:_currentlyEditingCell];
+        NSLog(@"Currently editing field: %@", _currentlyEditingCell.textField);
+        [_currentlyEditingCell.textField resignFirstResponder];
         [_currentlyEditingCell.textField becomeFirstResponder];
     }
     else
@@ -288,7 +289,7 @@
     [self tableView:_tableView didSelectRowAtIndexPath:indexPath];
 }
 
-- (void)scrollToAccommodateCell:(BCAbstractFormCell*)cell
+- (void)scrollToAccommodateCell:(BCAbstractCell*)cell
 {
     CGPoint position = [self convertPoint:cell.position toView:nil];
     NSLog(@"Position: %@", NSStringFromCGPoint(position));

@@ -12,16 +12,16 @@
 
 
 #import <Foundation/Foundation.h>
-#import "BCFormCellDelegate.h"
+#import "BCCellDelegate.h"
 
 @class BCFormInputAccessoryView;
-@class BCAbstractFormCell;
+@class BCAbstractCell;
 @class BCFormSection;
 
 
-@interface BCAbstractField : NSObject<BCFormCellDelegate>
+@interface BCAbstractField : NSObject<BCCellDelegate>
 {
-    BCAbstractFormCell* _cell;
+    BCAbstractCell* _cell;
 
     UIColor* _cellColor;
     UIColor* _selectedCellColor;
@@ -83,12 +83,12 @@
 
 #pragma mark - Abstract methods
 
-- (BCAbstractFormCell*)createCellInstance;
+- (BCAbstractCell*)createCellInstance;
 
-- (BCAbstractFormCell*)cell;
+- (BCAbstractCell*)cell;
 
 - (NSString*)textValue;
 
-- (void)setValue:(NSString*)value;
+- (void)setValue:(id<NSObject>)value;
 
 @end

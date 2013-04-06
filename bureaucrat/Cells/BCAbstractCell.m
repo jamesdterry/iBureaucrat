@@ -10,12 +10,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import "BCAbstractFormCell.h"
-#import "BCFormCellDelegate.h"
+#import "BCAbstractCell.h"
+#import "BCCellDelegate.h"
 #import "BCAbstractField.h"
 
 
-@implementation BCAbstractFormCell
+@implementation BCAbstractCell
 
 /* ============================================================ Initializers ============================================================ */
 - (id)init

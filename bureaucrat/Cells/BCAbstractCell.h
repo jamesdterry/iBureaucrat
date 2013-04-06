@@ -13,22 +13,26 @@
 
 
 #import <Foundation/Foundation.h>
-#import "BCAbstractFormCell.h"
 
-@class SettingsView;
+@protocol BCCellDelegate;
+@class BCAbstractField;
 
 
-@interface BCTextFieldFormCell : BCAbstractFormCell
+@interface BCAbstractCell : UITableViewCell
 {
-    UILabel* _label;
-    UITextField *_textField;
-    UILabel *_readOnlyField;
+    __weak BCAbstractField* _field;
 }
 
-@property (nonatomic, strong, readonly) UILabel* label;
-@property (nonatomic, strong, readonly) UITextField *textField;
-@property (nonatomic) BOOL editable;
 
+@property(nonatomic, strong) NSIndexPath* indexPath;
+
+@property (nonatomic, weak) id<BCCellDelegate>delegate;
+@property (nonatomic, weak) BCAbstractField* field;
+
+
+- (void)setFocused:(BOOL)focused;
+
+- (UITextField*)textField;
 
 
 @end

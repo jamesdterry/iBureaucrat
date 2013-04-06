@@ -14,10 +14,10 @@
 #import <Foundation/Foundation.h>
 #import "BCAbstractField.h"
 
-@class BCTextFieldFormCell;
+@class BCTextFieldCell;
 
 
-@interface BCPickerField : BCAbstractField <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface BCPickerField : BCAbstractField <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
 {
     UIPickerView* _pickerView;
     NSMutableArray* _options;
@@ -29,12 +29,12 @@
 */
 @property (nonatomic) SEL displayField;
 
-- (BCTextFieldFormCell*)cell;
+- (BCTextFieldCell*)cell;
 
 /**
 * Adds an option.
 */
-- (void)addOption:(id<NSObject>*)option;
+- (void)addOption:(id<NSObject>)option;
 
 /**
 * Adds options.

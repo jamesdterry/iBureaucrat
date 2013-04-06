@@ -50,6 +50,7 @@
 
 - (void)setValue:(NSString*)value
 {
+    [super setValue:value];
     self.cell.textField.text = value;
 }
 

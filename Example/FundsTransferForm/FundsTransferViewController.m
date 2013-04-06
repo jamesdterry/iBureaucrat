@@ -48,7 +48,7 @@
 
 - (void)didSelectDone
 {
-    NSLog(@"Delegate call for done");
+    NSLog(@"Delegate call for done. Field: %@", [_sendBy value]);
 }
 
 - (void)didSelectPreviousField

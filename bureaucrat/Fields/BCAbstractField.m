@@ -116,9 +116,15 @@
     return nil;
 }
 
+- (id <NSObject>)value
+{
+    return _value;
+}
+
+
 - (void)setValue:(id<NSObject>)value
 {
-
+    _value = value;
 }
 
 - (void)formCellWasFocused

@@ -83,6 +83,7 @@
 
 - (void)setValue:(id <NSObject>)value
 {
+    [super setValue:value];
     NSUInteger row = [_options indexOfObject:value];
     [self pickerView:_pickerView didSelectRow:row inComponent:0];
 }

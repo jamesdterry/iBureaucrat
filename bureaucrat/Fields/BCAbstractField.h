@@ -28,6 +28,8 @@
     UIColor* _sectionTitleColor;
     UIColor* _textColor;
     UIColor* _selectedTextColor;
+
+    id<NSObject> _value;
 }
 
 
@@ -88,6 +90,8 @@
 - (BCAbstractCell*)cell;
 
 - (NSString*)textValue;
+
+- (id<NSObject>)value;
 
 - (void)setValue:(id<NSObject>)value;
 

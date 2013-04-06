@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name = "iBureaucrat"
-  s.version = "0.0.3"
+  s.version = "0.0.4"
   s.summary = "A forms library for iOS."
   s.homepage = "git@github.com:jasperblues/iBureaucrat.git"
   s.license = { :type => 'Apache2', :file => 'LICENSE' }
   s.author = { "Jasper Blues" => "jasper@appsquick.ly" }
-  s.source = { :git => "https://github.com/jasperblues/iBureaucrat.git", :tag => "v0.0.3" }
+  s.source = { :git => "https://github.com/jasperblues/iBureaucrat.git", :tag => "v0.0.4" }
   s.platform = :ios
   s.source_files = 'bureaucrat/**/*.{h,m}'
   s.ios.frameworks = %w{ QuartzCore CoreGraphics }

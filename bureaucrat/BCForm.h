@@ -15,6 +15,9 @@
 
 @class BCFormSection;
 @class BCFormView;
+@class BCDefaultInputAccessory;
+@protocol BCInputAccessoryDelegate;
+@protocol BCFormDelegate;
 
 
 @interface BCForm : NSObject
@@ -37,6 +40,7 @@
 
 
 @property(nonatomic, weak) BCFormView* view;
+@property(nonatomic, weak) id<BCFormDelegate> delegate;
 
 + (id)formWithCellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor sectionTitleColor:(UIColor*)sectionTitleColor
         textColor:(UIColor*)textColor selectedTextColor:(UIColor*)selectedTextColor;

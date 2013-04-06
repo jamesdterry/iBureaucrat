@@ -11,14 +11,19 @@
 
 
 #import <UIKit/UIKit.h>
+#import "BCFormDelegate.h"
 
 @class BCPickerField;
 @class BCTextField;
+@class BCForm;
 
-@interface FundsTransferViewController : UIViewController
+@interface FundsTransferViewController : UIViewController<BCFormDelegate>
+{
+    BCForm* _form;
+}
 
-@property (nonatomic, strong, readonly) BCPickerField* countryCode;
-@property (nonatomic, strong, readonly) BCTextField* mobileId;
+@property (nonatomic, strong, readonly) BCPickerField* sendBy;
+@property (nonatomic, strong, readonly) BCTextField* notes;
 
 @property (nonatomic, strong, readonly) BCTextField* amountToSend;
 @property (nonatomic, strong, readonly) BCPickerField* currency;

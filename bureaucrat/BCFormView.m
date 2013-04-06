@@ -10,9 +10,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#include <CoreGraphics/CoreGraphics.h>
 #import "BCFormView.h"
-#import "BCFormInputAccessoryView.h"
+#import "BCDefaultInputAccessory.h"
 #import "BCFormSection.h"
 #import "UITableView+IndexPaths.h"
 #import "BCAbstractCell.h"
@@ -20,6 +19,7 @@
 #import "UITextField+AbstractFormCell.h"
 #import "BCForm.h"
 #import "CKUITools.h"
+#import "BCFormDelegate.h"
 
 @interface BCFormView ()
 
@@ -46,12 +46,11 @@
 
 
 /* ========================================================== Interface Methods ========================================================= */
-- (void) setForm:(BCForm*)form
+- (void)setForm:(BCForm*)form
 {
     _form = form;
     _form.view = self;
     NSLog(@"Using form: %@", form);
-//    [[NSNotificationCenter defaultCenter] notifyColorsChanged];
 }
 
 - (void)setCurrentlyEditingCell:(BCAbstractCell*)currentlyEditingCell
@@ -105,7 +104,6 @@
 
 - (void)textFieldDidEndEditing:(UITextField*)textField
 {
-
 }
 
 /* ====================================================================================================================================== */
@@ -122,17 +120,29 @@
         _currentScrollAmount = 0;
     }
     _currentlyEditingField = nil;
+    if ([_form.delegate respondsToSelector:@selector(didSelectDone)])
+    {
+        [_form.delegate didSelectDone];
+    }
 }
 
 
 - (void)didSelectPreviousField
 {
     [self selectRowAtIndexPath:[_tableView previousIndexPathGiven:_selectedIndexPath]];
+    if ([_form.delegate respondsToSelector:@selector(didSelectPreviousField)])
+    {
+        [_form.delegate didSelectPreviousField];
+    }
 }
 
 - (void)didSelectNextField
 {
     [self selectRowAtIndexPath:[_tableView nextIndexPathGiven:_selectedIndexPath]];
+    if ([_form.delegate respondsToSelector:@selector(didSelectNextField)])
+    {
+        [_form.delegate didSelectNextField];
+    }
 }
 
 /* ====================================================================================================================================== */
@@ -256,7 +266,7 @@
 
 - (void)initKeyboardAccessory
 {
-    _formNavigationAccessory = [BCFormInputAccessoryView viewWithDelegate:self];
+    _formNavigationAccessory = [BCDefaultInputAccessory viewWithDelegate:self];
 }
 
 

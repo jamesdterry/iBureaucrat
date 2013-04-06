@@ -32,8 +32,8 @@
 		6B009005170C244A00DB737B /* BCPickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FE9170C244A00DB737B /* BCPickerField.m */; };
 		6B009006170C244A00DB737B /* BCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEB170C244A00DB737B /* BCTextField.m */; };
 		6B009007170C244A00DB737B /* BCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEB170C244A00DB737B /* BCTextField.m */; };
-		6B009008170C244A00DB737B /* BCFormInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEE170C244A00DB737B /* BCFormInputAccessoryView.m */; };
-		6B009009170C244A00DB737B /* BCFormInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEE170C244A00DB737B /* BCFormInputAccessoryView.m */; };
+		6B009008170C244A00DB737B /* BCDefaultInputAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEE170C244A00DB737B /* BCDefaultInputAccessory.m */; };
+		6B009009170C244A00DB737B /* BCDefaultInputAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FEE170C244A00DB737B /* BCDefaultInputAccessory.m */; };
 		6B009019170C246600DB737B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B00900C170C246600DB737B /* AppDelegate.m */; };
 		6B00901A170C246600DB737B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B00900C170C246600DB737B /* AppDelegate.m */; };
 		6B00901C170C246600DB737B /* bureaucrat-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B00900D170C246600DB737B /* bureaucrat-Info.plist */; };
@@ -106,9 +106,9 @@
 		6B008FE9170C244A00DB737B /* BCPickerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPickerField.m; sourceTree = "<group>"; };
 		6B008FEA170C244A00DB737B /* BCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTextField.h; sourceTree = "<group>"; };
 		6B008FEB170C244A00DB737B /* BCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTextField.m; sourceTree = "<group>"; };
-		6B008FED170C244A00DB737B /* BCFormInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormInputAccessoryView.h; sourceTree = "<group>"; };
-		6B008FEE170C244A00DB737B /* BCFormInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFormInputAccessoryView.m; sourceTree = "<group>"; };
-		6B008FEF170C244A00DB737B /* BCFormInputAccessoryViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormInputAccessoryViewDelegate.h; sourceTree = "<group>"; };
+		6B008FED170C244A00DB737B /* BCDefaultInputAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDefaultInputAccessory.h; sourceTree = "<group>"; };
+		6B008FEE170C244A00DB737B /* BCDefaultInputAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDefaultInputAccessory.m; sourceTree = "<group>"; };
+		6B008FEF170C244A00DB737B /* BCInputAccessoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCInputAccessoryDelegate.h; sourceTree = "<group>"; };
 		6B00900B170C246600DB737B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B00900C170C246600DB737B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6B00900D170C246600DB737B /* bureaucrat-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "bureaucrat-Info.plist"; sourceTree = "<group>"; };
@@ -133,6 +133,7 @@
 		BA798277C36EB2822494DE8C /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
 		BA7988CFAE496EC9E8928FC4 /* FundsTransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FundsTransferViewController.h; sourceTree = "<group>"; };
 		BA79898F0829634B21EDA33F /* background-gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-gradient@2x.png"; sourceTree = "<group>"; };
+		BA798A47A705541F281E3617 /* BCFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormDelegate.h; sourceTree = "<group>"; };
 		BA798A4DB42F12C72C18A1FA /* background-gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-gradient.png"; sourceTree = "<group>"; };
 		BA798AE2780FE03F707BEC75 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BA798EBE601A207D3A2E3752 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -212,9 +213,9 @@
 		6B008FEC170C244A00DB737B /* InputAccessory */ = {
 			isa = PBXGroup;
 			children = (
-				6B008FED170C244A00DB737B /* BCFormInputAccessoryView.h */,
-				6B008FEE170C244A00DB737B /* BCFormInputAccessoryView.m */,
-				6B008FEF170C244A00DB737B /* BCFormInputAccessoryViewDelegate.h */,
+				6B008FED170C244A00DB737B /* BCDefaultInputAccessory.h */,
+				6B008FEE170C244A00DB737B /* BCDefaultInputAccessory.m */,
+				6B008FEF170C244A00DB737B /* BCInputAccessoryDelegate.h */,
 			);
 			path = InputAccessory;
 			sourceTree = "<group>";
@@ -284,6 +285,7 @@
 				6B008FDB170C244A00DB737B /* Cells */,
 				6B008FE3170C244A00DB737B /* Fields */,
 				6B008FEC170C244A00DB737B /* InputAccessory */,
+				BA798A47A705541F281E3617 /* BCFormDelegate.h */,
 			);
 			path = bureaucrat;
 			sourceTree = "<group>";
@@ -510,7 +512,7 @@
 				6B009002170C244A00DB737B /* BCPasswordField.m in Sources */,
 				6B009004170C244A00DB737B /* BCPickerField.m in Sources */,
 				6B009006170C244A00DB737B /* BCTextField.m in Sources */,
-				6B009008170C244A00DB737B /* BCFormInputAccessoryView.m in Sources */,
+				6B009008170C244A00DB737B /* BCDefaultInputAccessory.m in Sources */,
 				6B009019170C246600DB737B /* AppDelegate.m in Sources */,
 				6B009027170C246600DB737B /* main.m in Sources */,
 				BA798742848A56F02C4EFAAD /* FundsTransferViewController.m in Sources */,
@@ -536,7 +538,7 @@
 				6B009003170C244A00DB737B /* BCPasswordField.m in Sources */,
 				6B009005170C244A00DB737B /* BCPickerField.m in Sources */,
 				6B009007170C244A00DB737B /* BCTextField.m in Sources */,
-				6B009009170C244A00DB737B /* BCFormInputAccessoryView.m in Sources */,
+				6B009009170C244A00DB737B /* BCDefaultInputAccessory.m in Sources */,
 				6B00901A170C246600DB737B /* AppDelegate.m in Sources */,
 				BA7980E45F032666A2719FD8 /* FundsTransferViewController.m in Sources */,
 				BA7983198A6E2880002DE087 /* FundsTransferView.m in Sources */,

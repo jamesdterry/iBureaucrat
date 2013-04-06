@@ -36,19 +36,50 @@
     [super viewDidLoad];
     FundsTransferView* view = (FundsTransferView*) self.view;
 
-    BCForm* form = [BCForm new]; //Using default colors.
-    BCFormSection* destinationPhoneSection = [form addSection:[BCFormSection sectionWithTitle:@"Transport Details"]];
+    _form = [BCForm new]; //Using default colors.
+    _form.delegate = self;
+    [_form addSection:[self createTransportDetailsSection]];
+    [_form addSection:[self createDetailsSection]];
+    view.formView.form = _form;
+}
 
-    _countryCode = [BCPickerField fieldWithLabel:@"Send by"];
-    [_countryCode addOption:[Vehicle vehicleWithName:@"Horse" traits:@"grain tax"]];
-    [_countryCode addOption:[Vehicle vehicleWithName:@"Scoundrel" traits:@"reliable"]];
-    [_countryCode addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
+/* ====================================================================================================================================== */
+#pragma mark <BCFormDelegate>
 
-    _mobileId = [BCTextField fieldWithLabel:@"Number"];
-    _mobileId.textField.keyboardType = UIKeyboardTypePhonePad;
-    [destinationPhoneSection addFields:@[_countryCode, _mobileId]];
+- (void)didSelectDone
+{
+    NSLog(@"Delegate call for done");
+}
 
-    BCFormSection* detailsSection = [form addSection:[BCFormSection sectionWithTitle:@"Details"]];
+- (void)didSelectPreviousField
+{
+    NSLog(@"Delegate call for previous");
+}
+
+- (void)didSelectNextField
+{
+    NSLog(@"Delegate call for next");
+}
+
+
+/* ============================================================ Private Methods ========================================================= */
+- (BCFormSection*)createTransportDetailsSection
+{
+    BCFormSection* transportDetailsSection = [BCFormSection sectionWithTitle:@"Transport Details"];
+    _sendBy = [BCPickerField fieldWithLabel:@"Send by"];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Horse" traits:@"grain tax"]];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Scoundrel" traits:@"reliable"]];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
+
+    _notes = [BCTextField fieldWithLabel:@"Notes"];
+    _notes.textField.keyboardType = UIKeyboardTypePhonePad;
+    [transportDetailsSection addFields:@[_sendBy, _notes]];
+    return transportDetailsSection;
+}
+
+- (BCFormSection*)createDetailsSection
+{
+    BCFormSection* detailsSection = [BCFormSection sectionWithTitle:@"Details"];
 
     _amountToSend = [BCTextField fieldWithLabel:@"Amount"];
     _amountToSend.textField.keyboardType = UIKeyboardTypeNumberPad;
@@ -60,11 +91,8 @@
 
     _referenceIdField = [BCTextField fieldWithLabel:@"Reference ID"];
     [detailsSection addFields:@[_amountToSend, _currency, _referenceIdField]];
-
-    view.formView.form = form;
+    return detailsSection;
 }
-
-/* ============================================================ Private Methods ========================================================= */
 
 
 @end

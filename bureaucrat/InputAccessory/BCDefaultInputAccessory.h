@@ -14,12 +14,12 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol BCFormInputAccessoryViewDelegate;
+@protocol BCInputAccessoryDelegate;
 
 
-@interface BCFormInputAccessoryView : UIToolbar
+@interface BCDefaultInputAccessory : UIToolbar
 {
-    __weak id<BCFormInputAccessoryViewDelegate> _accessoryViewDelegate;
+    __weak id<BCInputAccessoryDelegate> _accessoryViewDelegate;
 }
 
 @property (nonatomic, strong, readonly) UIBarButtonItem* doneButton;
@@ -27,6 +27,6 @@
 @property (nonatomic, strong, readonly) UIBarButtonItem* nextButton;
 
 
-+ (BCFormInputAccessoryView*)viewWithDelegate:(id<BCFormInputAccessoryViewDelegate>)delegate;
++ (BCDefaultInputAccessory*)viewWithDelegate:(id<BCInputAccessoryDelegate>)delegate;
 
 @end

@@ -11,15 +11,15 @@
 
 
 
-#import "BCFormInputAccessoryView.h"
-#import "BCFormInputAccessoryViewDelegate.h"
+#import "BCDefaultInputAccessory.h"
+#import "BCInputAccessoryDelegate.h"
 
 
-@implementation BCFormInputAccessoryView
+@implementation BCDefaultInputAccessory
 
-+ (BCFormInputAccessoryView*)viewWithDelegate:(id<BCFormInputAccessoryViewDelegate>)delegate;
++ (BCDefaultInputAccessory*)viewWithDelegate:(id<BCInputAccessoryDelegate>)delegate;
 {
-    BCFormInputAccessoryView* view = [[[self class] alloc] initWithFrame:CGRectMake(0.0, 0.0, 310.0, 40.0)];
+    BCDefaultInputAccessory* view = [[[self class] alloc] initWithFrame:CGRectMake(0.0, 0.0, 310.0, 40.0)];
     [view setAccessoryViewDelegate:delegate];
     return view;
 }
@@ -67,7 +67,7 @@
     [_accessoryViewDelegate didSelectNextField];
 }
 
-- (void)setAccessoryViewDelegate:(id<BCFormInputAccessoryViewDelegate>)delegate
+- (void)setAccessoryViewDelegate:(id<BCInputAccessoryDelegate>)delegate
 {
     _accessoryViewDelegate = delegate;
 }

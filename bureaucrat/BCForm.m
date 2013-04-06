@@ -13,6 +13,7 @@
 
 #import "BCForm.h"
 #import "BCFormSection.h"
+#import "BCInputAccessoryDelegate.h"
 
 
 @implementation BCForm

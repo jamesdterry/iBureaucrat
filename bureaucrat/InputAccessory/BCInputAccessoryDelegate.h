@@ -13,7 +13,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol BCFormInputAccessoryViewDelegate <NSObject>
+@protocol BCInputAccessoryDelegate <NSObject>
+
+@optional
 
 - (void)didSelectDone;
 

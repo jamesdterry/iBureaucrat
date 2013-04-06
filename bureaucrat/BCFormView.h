@@ -11,19 +11,19 @@
 
 
 #import <Foundation/Foundation.h>
-#import "BCFormInputAccessoryViewDelegate.h"
+#import "BCInputAccessoryDelegate.h"
 
-@class BCFormInputAccessoryView;
+@class BCDefaultInputAccessory;
 @class BCFormSection;
 @class BCAbstractCell;
 @class BCForm;
 
 
-@interface BCFormView : UIView<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, BCFormInputAccessoryViewDelegate>
+@interface BCFormView : UIView<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, BCInputAccessoryDelegate>
 {
     UIView* _backgroundView;
     UITableView* _tableView;
-    BCFormInputAccessoryView* _formNavigationAccessory;
+    BCDefaultInputAccessory* _formNavigationAccessory;
 
     CGFloat _currentScrollAmount;
 

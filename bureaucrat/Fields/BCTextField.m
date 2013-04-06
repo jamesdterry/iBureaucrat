@@ -12,7 +12,7 @@
 
 #import "BCTextField.h"
 #import "BCTextFieldCell.h"
-#import "BCFormInputAccessoryView.h"
+#import "BCDefaultInputAccessory.h"
 #import "BCFormSection.h"
 #import "BCFormView.h"
 #import "UITextField+AbstractFormCell.h"
@@ -53,7 +53,7 @@
     self.cell.textField.text = value;
 }
 
-- (void)setInputAccessoryView:(BCFormInputAccessoryView*)inputAccessoryView
+- (void)setInputAccessoryView:(BCDefaultInputAccessory*)inputAccessoryView
 {
     self.cell.textField.inputAccessoryView = inputAccessoryView;
 }

@@ -14,7 +14,7 @@
 #import <Foundation/Foundation.h>
 #import "BCCellDelegate.h"
 
-@class BCFormInputAccessoryView;
+@class BCDefaultInputAccessory;
 @class BCAbstractCell;
 @class BCFormSection;
 

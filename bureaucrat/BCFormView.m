@@ -95,6 +95,7 @@
 {
     if (_currentlyEditingField != textField)
     {
+        [_currentlyEditingCell setFocused:NO];
         _selectedIndexPath = nil;
         [self selectRowAtIndexPath:textField.formCell.indexPath];
         _currentlyEditingField = textField;

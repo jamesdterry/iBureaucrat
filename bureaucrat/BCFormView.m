@@ -19,6 +19,7 @@
 #import "UITextField+AbstractFormCell.h"
 #import "BCForm.h"
 #import "CKUITools.h"
+#import "BCFormDelegate.h"
 
 
 @interface BCFormView ()

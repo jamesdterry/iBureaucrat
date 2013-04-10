@@ -19,7 +19,7 @@
 #import "UITextField+AbstractFormCell.h"
 #import "BCForm.h"
 #import "CKUITools.h"
-#import "BCFormDelegate.h"
+
 
 @interface BCFormView ()
 
@@ -76,7 +76,6 @@
     }
 
     _backgroundView.frame = _contentView.bounds;
-    //TODO: Add sizing for table view
     _tableView.frame = _contentView.bounds;
 }
 
@@ -307,7 +306,8 @@
     CGFloat y = position.y;
     CGRect keyboardFrame = [self onScreenKeyboardFrame];
     CGFloat scrollAmount = 0;
-    CGFloat visibleY = self.height - keyboardFrame.size.height;
+    CGFloat visibleY = [UIScreen mainScreen].currentSize.height - keyboardFrame.size.height;
+
     if (y > visibleY)
     {
         scrollAmount = visibleY - y;
@@ -318,11 +318,14 @@
     }
     else
     {
-        _currentScrollAmount = 0;
-        [UIView transitionWithView:self duration:0.4 options:UIViewAnimationOptionCurveEaseOut animations:^
+        if (_currentScrollAmount != 0)
         {
-            _contentView.frame = [self bounds];
-        } completion:nil];
+            _currentScrollAmount = 0;
+            [UIView transitionWithView:self duration:0.4 options:UIViewAnimationOptionCurveEaseOut animations:^
+            {
+                _contentView.frame = [self bounds];
+            } completion:nil];
+        }
     }
 }
 

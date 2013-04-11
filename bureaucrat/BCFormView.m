@@ -307,7 +307,10 @@
     CGFloat y = position.y;
     CGRect keyboardFrame = [self onScreenKeyboardFrame];
     CGFloat scrollAmount = 0;
-    CGFloat visibleY = [UIScreen mainScreen].currentSize.height - keyboardFrame.size.height;
+    CGFloat padding = 10.0;
+    CGFloat actualY =
+            [UIScreen mainScreen].currentSize.height - keyboardFrame.size.height - _formNavigationAccessory.height - cell.height - padding;
+    CGFloat visibleY = actualY;
 
     if (y > visibleY)
     {

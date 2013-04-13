@@ -19,9 +19,9 @@
 @class BCFormSection;
 
 /**
-* This is a base class that it designed to be extended to add new types. The key method to implement is:
+* This is a base class that it designed to be extended to add new types of form fields. The key method to implement is:
 *
-* -createCell - a fully abstract method. Sub-classes must return an instance of BCAbstractCell.
+* -createCell - sub-classes must return an instance of BCAbstractCell.
 */
 @interface BCAbstractField : NSObject<BCCellDelegate>
 {

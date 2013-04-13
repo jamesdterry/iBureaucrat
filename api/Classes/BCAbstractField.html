@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -89,6 +91,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -183,6 +187,16 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This is a base class that it designed to be extended to add new types. The key method to implement is:</p>
+
+<p>-createCell &ndash; a fully abstract method. Sub-classes must return an instance of <a href="../Classes/BCAbstractCell.html">BCAbstractCell</a>.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -273,36 +287,38 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/createCellInstance">&ndash;&nbsp;createCellInstance</a></code>
-		
+		<code><a href="#//api/name/cell">&ndash;&nbsp;cell</a></code>
+		<span class="tooltip"><p>Returns the created cell instance.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/cell">&ndash;&nbsp;cell</a></code>
-		
+		<code><a href="#//api/name/createCellInstance">&ndash;&nbsp;createCellInstance</a></code>
+		<span class="tooltip"><p>The key method to be implemented by sub-classes. This is the appropriate place to also specify a custom input view. To do this set
+<code></code>cell<code>.textField.inputView = &lt;your input view&gt;</code> &hellip; this of course requires a text-field to capture the input, but the text field need
+not be a visible part of the <a href="#//api/name/cell">cell</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/textValue">&ndash;&nbsp;textValue</a></code>
-		
+		<span class="tooltip"><p>Returns the selected/set <a href="#//api/name/value">value</a> as a string.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/value">&ndash;&nbsp;value</a></code>
-		
+		<span class="tooltip"><p>Returns the selected/set value.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setValue:">&ndash;&nbsp;setValue:</a></code>
-		
+		<span class="tooltip"><p>Sets the <a href="../Classes/BCAbstractField.html#//api/name/value">value</a>.</p></span>
 	</span>
 	
 	
@@ -690,10 +706,49 @@
 	<h3 class="subsubtitle method-title">cell</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the created cell instance.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (BCAbstractCell *)cell</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the created cell instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/BCAbstractField.html#//api/name/createCellInstance">&ndash; createCellInstance</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BCAbstractField.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -701,10 +756,44 @@
 	<h3 class="subsubtitle method-title">createCellInstance</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The key method to be implemented by sub-classes. This is the appropriate place to also specify a custom input view. To do this set
+<code></code>cell<code>.textField.inputView = &lt;your input view&gt;</code> &hellip; this of course requires a text-field to capture the input, but the text field need
+not be a visible part of the <a href="#//api/name/cell">cell</a>.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (BCAbstractCell *)createCellInstance</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The key method to be implemented by sub-classes. This is the appropriate place to also specify a custom input view. To do this set
+<code></code>cell<code>.textField.inputView = &lt;your input view&gt;</code> &hellip; this of course requires a text-field to capture the input, but the text field need
+not be a visible part of the <a href="#//api/name/cell">cell</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BCAbstractField.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -723,10 +812,40 @@
 	<h3 class="subsubtitle method-title">setValue:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="../Classes/BCAbstractField.html#//api/name/value">value</a>.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)setValue:(id&lt;NSObject&gt;)<em>value</em></code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the <a href="../Classes/BCAbstractField.html#//api/name/value">value</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BCAbstractField.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -734,10 +853,40 @@
 	<h3 class="subsubtitle method-title">textValue</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the selected/set <a href="#//api/name/value">value</a> as a string.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (NSString *)textValue</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the selected/set <a href="#//api/name/value">value</a> as a string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BCAbstractField.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -745,10 +894,40 @@
 	<h3 class="subsubtitle method-title">value</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the selected/set value.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (id&lt;NSObject&gt;)value</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the selected/set value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BCAbstractField.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>

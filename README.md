@@ -12,7 +12,7 @@ A forms library for iOS.
 Nobody likes filling out forms. Or making them. iBureaucrat lets you rapidly create forms for you iOS apps - so you 
 can get back to the fun stuff. 
 
-Using tableviews is the defacto way to layout forms for iOS, and they look great. But for every project there's a
+Using tableviews is the defacto standard way to layout forms for iOS, and they look great. But for every project there's a
 lot of boiler-plate code to set up. It ends up being the same old plumbing code over and over. 
 
 There are a few fantastic forms libraries for iOS. This one attempts to be: 
@@ -77,6 +77,11 @@ There are a few fantastic forms libraries for iOS. This one attempts to be:
     NSLog(@"Delegate call for next");
 }
 ```
+
+##Creating your own types
+
+* There's an abstract base-class designed to be extended: 
+
 
 # API Docs
 

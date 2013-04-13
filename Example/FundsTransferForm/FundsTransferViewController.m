@@ -41,7 +41,9 @@
     _form.delegate = self;
     [_form addSection:[self createTransportDetailsSection]];
     [_form addSection:[self createDetailsSection]];
-    [_form addSection:[self createAuthorizeSection]];
+
+    //Uncomment this to try a long form
+    //[_form addSection:[self createAuthorizeSection]];
 
     view.formView.form = _form;
 }
@@ -75,7 +77,6 @@
     [_sendBy addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
 
     _notes = [BCTextField fieldWithLabel:@"Notes"];
-    _notes.textField.keyboardType = UIKeyboardTypePhonePad;
     [transportDetailsSection addFields:@[_sendBy, _notes]];
     return transportDetailsSection;
 }

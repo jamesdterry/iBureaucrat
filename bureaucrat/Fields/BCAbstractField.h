@@ -18,7 +18,11 @@
 @class BCAbstractCell;
 @class BCFormSection;
 
-
+/**
+* This is a base class that it designed to be extended to add new types. The key method to implement is:
+*
+* -createCell - a fully abstract method. Sub-classes must return an instance of BCAbstractCell.
+*/
 @interface BCAbstractField : NSObject<BCCellDelegate>
 {
     BCAbstractCell* _cell;
@@ -83,16 +87,34 @@
 - (id)initWithLabel:(NSString*)label cellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor
         sectionTitleColor:(UIColor*)sectionTitleColor;
 
-#pragma mark - Abstract methods
-
-- (BCAbstractCell*)createCellInstance;
-
+/**
+* Returns the created cell instance.
+* @see createCellInstance
+*/
 - (BCAbstractCell*)cell;
 
+#pragma mark - Abstract methods
+
+/**
+* The key method to be implemented by sub-classes. This is the appropriate place to also specify a custom input view. To do this set
+* `cell.textField.inputView = <your input view>` . . . this of course requires a text-field to capture the input, but the text field need
+* not be a visible part of the cell.
+*/
+- (BCAbstractCell*)createCellInstance;
+
+/**
+* Returns the selected/set value as a string.
+*/
 - (NSString*)textValue;
 
+/**
+* Returns the selected/set value.
+*/
 - (id<NSObject>)value;
 
+/**
+* Sets the value.
+*/
 - (void)setValue:(id<NSObject>)value;
 
 @end

@@ -225,6 +225,7 @@
     {
         NSIndexPath* previousSelectedCellIndexPath = _selectedIndexPath;
         _selectedIndexPath = indexPath;
+        [_tableView scrollToRowAtIndexPath:_selectedIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
         NSArray* rows;
         if (previousSelectedCellIndexPath == nil)
         {
@@ -258,7 +259,7 @@
     UIView* backgroundView = [[UIView alloc] init];
     [backgroundView setBackgroundColor:[UIColor clearColor]];
     [_tableView setBackgroundView:backgroundView];
-    [_tableView setScrollEnabled:NO];
+//    [_tableView setScrollEnabled:NO];
 
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -278,17 +279,10 @@
     return CGSizeMake(320, 216);
 }
 
-- (CGRect)onScreenKeyboardFrame;
+- (CGRect)keyboardFrame;
 {
     CGSize keyboardSize = [self keyboardSize];
     CGRect frame = CGRectMake(0, self.height - keyboardSize.height, self.width, keyboardSize.height);
-    return frame;
-}
-
-- (CGRect)offScreenKeyboardFrame;
-{
-    CGSize keyboardSize = [self keyboardSize];
-    CGRect frame = CGRectMake(0, self.height, self.width, keyboardSize.height);
     return frame;
 }
 
@@ -305,11 +299,11 @@
     CGPoint position = [self convertPoint:cell.position toView:nil];
     NSLog(@"Position: %@", NSStringFromCGPoint(position));
     CGFloat y = position.y;
-    CGRect keyboardFrame = [self onScreenKeyboardFrame];
     CGFloat scrollAmount = 0;
     CGFloat padding = 10.0;
     CGFloat actualY =
-            [UIScreen mainScreen].currentSize.height - keyboardFrame.size.height - _formNavigationAccessory.height - cell.height - padding;
+            [UIScreen mainScreen].currentSize.height - [self keyboardSize].height - _formNavigationAccessory.height - cell.height -
+                    -_tableView.contentOffset.y - padding;
     CGFloat visibleY = actualY;
 
     if (y > visibleY)

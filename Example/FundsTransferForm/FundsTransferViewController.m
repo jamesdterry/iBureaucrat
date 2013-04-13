@@ -18,6 +18,7 @@
 #import "BCForm.h"
 #import "BCFormView.h"
 #import "Vehicle.h"
+#import "BCPasswordField.h"
 
 @interface FundsTransferViewController ()
 
@@ -40,6 +41,8 @@
     _form.delegate = self;
     [_form addSection:[self createTransportDetailsSection]];
     [_form addSection:[self createDetailsSection]];
+    [_form addSection:[self createAuthorizeSection]];
+
     view.formView.form = _form;
 }
 
@@ -90,8 +93,21 @@
     [_currency addOption:@"Herbs and Spices"];
 
     _referenceIdField = [BCTextField fieldWithLabel:@"Reference ID"];
-    [detailsSection addFields:@[_amountToSend, _currency, _referenceIdField]];
+    _anotherField = [BCTextField fieldWithLabel:@"Another Field"];
+
+    [detailsSection addFields:@[_amountToSend, _currency, _referenceIdField, _anotherField]];
     return detailsSection;
+}
+
+- (BCFormSection*)createAuthorizeSection
+{
+    BCFormSection* authorizeSection = [BCFormSection sectionWithTitle:@"Authorization"];
+
+    _password = [BCPasswordField fieldWithLabel:@"Password"];
+    _secretInstructions = [BCPasswordField fieldWithLabel:@"Instructions"];
+
+    [authorizeSection addFields:@[_password, _secretInstructions]];
+    return authorizeSection;
 }
 
 

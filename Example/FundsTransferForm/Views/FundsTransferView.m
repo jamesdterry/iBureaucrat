@@ -37,8 +37,7 @@
     [super layoutSubviews];
     _backgroundView.frame = self.bounds;
     _navigationBar.width = self.width;
-    _formView.frame = CGRectInset(self.bounds, 10, 50);
-
+    _formView.frame = CGRectMake(0, 50, self.width, self.height - 60);
     NSLog(@"Formview frame: %@", NSStringFromCGRect(_formView.frame));
 }
 

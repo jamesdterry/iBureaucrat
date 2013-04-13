@@ -39,6 +39,6 @@
 @property (nonatomic, strong) UIView* backgroundView;
 
 
-- (CGRect)onScreenKeyboardFrame;
+- (CGRect)keyboardFrame;
 
 @end

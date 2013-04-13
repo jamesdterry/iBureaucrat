@@ -24,31 +24,9 @@ There are a few fantastic forms libraries for iOS. This one attempts to be:
 
 ###Create a view controller
 
-```objective-c
-@interface FundsTransferViewController : UIViewController<BCFormDelegate>
-{
-    BCForm* _form;
-}
-
-@property (nonatomic, strong, readonly) BCPickerField* sendBy;
-@property (nonatomic, strong, readonly) BCTextField* notes;
-
-@end
-```
-
-###Create a view
-
-Using Interface Builder or code, add a BCFormView to the view. Example: 
-
-```objective-c
-- (void)initFormView
-{
-    _formView = [[BCFormView alloc] initWithFrame:CGRectZero];
-    [self addSubview:_formView];
-}
-```
-
-###Give the form view a form: 
+* Create a view controller
+* Add a BCFormView to the view controller's view. 
+* Give the BCFormView a form, as follows:
 
 ```objective-c
 - (void)viewDidLoad

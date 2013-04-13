@@ -12,7 +12,7 @@ A forms library for iOS.
 Nobody likes filling out forms. Or making them. iBureaucrat lets you rapidly create forms for you iOS apps - so you 
 can get back to the fun stuff. 
 
-Using tableviews is the defacto way to layout forms for iOS, and they look great. But for every project there's a
+Using tableviews is the defacto standard way to layout forms for iOS, and they look great. But for every project there's a
 lot of boiler-plate code to set up. It ends up being the same old plumbing code over and over. 
 
 There are a few fantastic forms libraries for iOS. This one attempts to be: 
@@ -24,31 +24,9 @@ There are a few fantastic forms libraries for iOS. This one attempts to be:
 
 ###Create a view controller
 
-```objective-c
-@interface FundsTransferViewController : UIViewController<BCFormDelegate>
-{
-    BCForm* _form;
-}
-
-@property (nonatomic, strong, readonly) BCPickerField* sendBy;
-@property (nonatomic, strong, readonly) BCTextField* notes;
-
-@end
-```
-
-###Create a view
-
-Using Interface Builder or code, add a BCFormView to the view. Example: 
-
-```objective-c
-- (void)initFormView
-{
-    _formView = [[BCFormView alloc] initWithFrame:CGRectZero];
-    [self addSubview:_formView];
-}
-```
-
-###Give the form view a form: 
+* Create a view controller
+* Add a BCFormView to the view controller's view. 
+* Give the BCFormView a form, as follows:
 
 ```objective-c
 - (void)viewDidLoad
@@ -100,9 +78,9 @@ Using Interface Builder or code, add a BCFormView to the view. Example:
 }
 ```
 
-# API Docs
+#Creating your own types
 
-* Browse API docs: <a href="http://jasperblues.github.com/iBureaucrat/api/index.html">here</a>
+* There's an <a href="http://jasperblues.github.io/iBureaucrat/api/Classes/BCAbstractField.html">abstract base-class designed to be extended</a>. 
 
 
 #Installation: 

@@ -102,10 +102,12 @@ Using Interface Builder or code, add a BCFormView to the view. Example:
 
 # API Docs
 
-* <a href="http://jasperblues.github.com/iBureaucrat/api/index.html">API</a>
+* Browse API docs: <a href="http://jasperblues.github.com/iBureaucrat/api/index.html">here</a>
 
 
+#Installation: 
 
+iBureaucrat is availble via CocoaPods (recommended), otherwise copy the source files to your project directory. 
 
 # Authors
 

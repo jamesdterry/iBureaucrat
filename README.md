@@ -107,7 +107,8 @@ Using Interface Builder or code, add a BCFormView to the view. Example:
 
 #Installation: 
 
-iBureaucrat is availble via CocoaPods (recommended), otherwise copy the source files to your project directory. 
+* iBureaucrat is availble via CocoaPods (recommended)
+* Otherwise, copy the source files to your project directory. Add the QuartzCore and CoreGraphics frameworks. 
 
 # Authors
 

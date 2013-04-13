@@ -22,6 +22,83 @@ There are a few fantastic forms libraries for iOS. This one attempts to be:
 
 #Usage
 
+###Create a view controller
+
+```objective-c
+@interface FundsTransferViewController : UIViewController<BCFormDelegate>
+{
+    BCForm* _form;
+}
+
+@property (nonatomic, strong, readonly) BCPickerField* sendBy;
+@property (nonatomic, strong, readonly) BCTextField* notes;
+
+@end
+```
+
+###Create a view
+
+Using Interface Builder or code, add a BCFormView to the view. Example: 
+
+```objective-c
+- (void)initFormView
+{
+    _formView = [[BCFormView alloc] initWithFrame:CGRectZero];
+    [self addSubview:_formView];
+}
+```
+
+###Give the form view a form: 
+
+```objective-c
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    FundsTransferView* view = (FundsTransferView*) self.view;
+
+    _form = [BCForm new]; //Using default colors.
+    _form.delegate = self;
+    [_form addSection:[self createTransportDetailsSection]];
+    [_form addSection:[self createDetailsSection]];
+    
+    view.formView.form = _form;
+}
+
+- (BCFormSection*)createTransportDetailsSection
+{
+    BCFormSection* transportDetailsSection = [BCFormSection sectionWithTitle:@"Transport Details"];
+    _sendBy = [BCPickerField fieldWithLabel:@"Send by"];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Horse" traits:@"grain tax"]];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Scoundrel" traits:@"reliable"]];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
+
+    _notes = [BCTextField fieldWithLabel:@"Notes"];
+    [transportDetailsSection addFields:@[_sendBy, _notes]];
+    return transportDetailsSection;
+}
+
+```
+
+###Add Delegate methods if you like:
+
+```objective-c
+#pragma mark <BCFormDelegate>
+
+- (void)didSelectDone
+{
+    NSLog(@"Delegate call for done. Field: %@", [_sendBy value]);
+}
+
+- (void)didSelectPreviousField
+{
+    NSLog(@"Delegate call for previous");
+}
+
+- (void)didSelectNextField
+{
+    NSLog(@"Delegate call for next");
+}
+```
 
 
 

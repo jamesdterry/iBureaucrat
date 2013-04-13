@@ -22,3 +22,23 @@ There are a few fantastic forms libraries for iOS. This one attempts to be:
 
 #Usage
 
+
+
+
+
+# Authors
+
+* <a href="http://ph.linkedin.com/pub/jasper-blues/8/163/778">Jasper Blues</a> - <a href="mailto:jasper@appsquick.ly?Subject=Typhoon">jasper@appsquick.ly</a>
+         
+### With contributions from: 
+
+* ___Your name here!!!!!!!___ 
+
+Thanks!!!
+
+
+# LICENSE
+
+Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/
+
+© 2012 - 2013 Jasper Blues and contributors.

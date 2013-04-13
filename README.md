@@ -78,14 +78,9 @@ There are a few fantastic forms libraries for iOS. This one attempts to be:
 }
 ```
 
-##Creating your own types
+#Creating your own types
 
 * There's an <a href="http://jasperblues.github.io/iBureaucrat/api/Classes/BCAbstractField.html">abstract base-class designed to be extended</a>. 
-
-
-# API Docs
-
-* Browse API docs: <a href="http://jasperblues.github.com/iBureaucrat/api/index.html">here</a>
 
 
 #Installation: 

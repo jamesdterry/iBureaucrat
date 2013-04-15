@@ -3,6 +3,11 @@ iBureaucrat
 
 A forms library for iOS. 
 
+##Status?
+
+* Still alpha, but stable API
+* iPad not yet supported (though this will be very simple to add). 
+
 
 ![Form](http://jasperblues.github.com/iBureaucrat/form.png)
 ![Edit](http://jasperblues.github.com/iBureaucrat/edit.png)

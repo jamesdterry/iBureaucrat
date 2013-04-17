@@ -18,7 +18,8 @@ Nobody likes filling out forms. Or making them. iBureaucrat lets you rapidly cre
 can get back to the fun stuff. 
 
 Using tableviews is the defacto standard way to layout forms for iOS, and they look great. But for every project there's a
-lot of boiler-plate code to set up. It ends up being the same old plumbing code over and over. 
+lot of boiler-plate code to set up - different kinds of table-view cells, custom input views, automatically scrolling
+to accommodate the keyboard/inputview, etc. . It ends up being the same old plumbing code over and over. 
 
 There are a few fantastic forms libraries for iOS. This one attempts to be: 
 

@@ -126,6 +126,7 @@
 - (void)setValue:(id<NSObject>)value
 {
     _value = value;
+    [self.cell layoutIfNeeded];
 }
 
 - (void)formCellWasFocused

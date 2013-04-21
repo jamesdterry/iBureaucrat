@@ -1,5 +1,5 @@
 PODS:
-  - CKUITools (0.5.0)
+  - CKUITools (0.5.1)
   - Expecta (0.2.1)
   - OCHamcrest (1.9)
   - OCMockito (0.23):
@@ -12,9 +12,9 @@ DEPENDENCIES:
   - OCMockito
 
 SPEC CHECKSUMS:
-  CKUITools: 76919c622a4663b998cc0277734f0823162b3df0
+  CKUITools: 9b831912af9de81396f70954ccbece609fd17528
   Expecta: d46fb1bd78c90a83da0158b9b1e108de106e369f
   OCHamcrest: f8393efd5a49d91879be573635d6183effacc0ab
   OCMockito: 2223021dd82697fc536c403d6850d2ed8ffae578
 
-COCOAPODS: 0.17.2
+COCOAPODS: 0.18.1

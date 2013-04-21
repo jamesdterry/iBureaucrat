@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		682D86C2601D4C74B4DAAA20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0DADA2B6B24E6B9EAA6D47 /* libPods.a */; settings = {}; };
+		682D86C2601D4C74B4DAAA20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0DADA2B6B24E6B9EAA6D47 /* libPods.a */; };
 		6B008FF0170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
 		6B008FF1170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
 		6B008FF2170C244A00DB737B /* BCFormSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD3170C244A00DB737B /* BCFormSection.m */; };
@@ -49,7 +49,7 @@
 		6BD31AF6170C189A007BAF4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD31AD1170C189A007BAF4F /* Foundation.framework */; };
 		6BD31AFE170C189A007BAF4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD31AFC170C189A007BAF4F /* InfoPlist.strings */; };
 		6BD31B01170C189A007BAF4F /* bureaucratTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD31B00170C189A007BAF4F /* bureaucratTests.m */; };
-		7F903C09747C4BF3BD28FE73 /* libPods-bureaucratTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48569C37ECA243059708F32B /* libPods-bureaucratTests.a */; settings = {}; };
+		7F903C09747C4BF3BD28FE73 /* libPods-bureaucratTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48569C37ECA243059708F32B /* libPods-bureaucratTests.a */; };
 		BA79800FE4605A01EF2F9612 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798F030395FE3D91979212 /* Default@2x.png */; };
 		BA7980E45F032666A2719FD8 /* FundsTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79801171376769C364AEA7 /* FundsTransferViewController.m */; };
 		BA7983198A6E2880002DE087 /* FundsTransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7981E96002FCA868F2CD79 /* FundsTransferView.m */; };
@@ -79,7 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		48569C37ECA243059708F32B /* libPods-bureaucratTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-bureaucratTests.a"; path = "libPods-bureaucratTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48569C37ECA243059708F32B /* libPods-bureaucratTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bureaucratTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E102EDFAD18450BB53BD57F /* Pods-bureaucratTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bureaucratTests.xcconfig"; path = "Pods/Pods-bureaucratTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		6B008FD0170C244A00DB737B /* BCForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCForm.h; sourceTree = "<group>"; };
 		6B008FD1170C244A00DB737B /* BCForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCForm.m; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		6BD31AFD170C189A007BAF4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BD31AFF170C189A007BAF4F /* bureaucratTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bureaucratTests.h; sourceTree = "<group>"; };
 		6BD31B00170C189A007BAF4F /* bureaucratTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bureaucratTests.m; sourceTree = "<group>"; };
-		6F0DADA2B6B24E6B9EAA6D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPods.a; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0DADA2B6B24E6B9EAA6D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA79801171376769C364AEA7 /* FundsTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundsTransferViewController.m; sourceTree = "<group>"; };
 		BA7981E96002FCA868F2CD79 /* FundsTransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundsTransferView.m; sourceTree = "<group>"; };
 		BA7981F8D8908580B66253FE /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
@@ -359,7 +359,6 @@
 				6BD31AC8170C189A007BAF4F /* Sources */,
 				6BD31AC9170C189A007BAF4F /* Frameworks */,
 				6BD31ACA170C189A007BAF4F /* Resources */,
-				7BAD90EC31A44AF0AE1D1795 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,7 +377,6 @@
 				6BD31AEE170C189A007BAF4F /* Frameworks */,
 				6BD31AEF170C189A007BAF4F /* Resources */,
 				6BD31AF0170C189A007BAF4F /* ShellScript */,
-				A410E1477644433EBEAB8784 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -409,8 +407,6 @@
 			mainGroup = 6BD31AC3170C189A007BAF4F;
 			productRefGroup = 6BD31ACD170C189A007BAF4F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				6BD31ACB170C189A007BAF4F /* bureaucrat */,
@@ -462,36 +458,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		7BAD90EC31A44AF0AE1D1795 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 1;
-		};
-		A410E1477644433EBEAB8784 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-bureaucratTests-resources.sh\"\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 

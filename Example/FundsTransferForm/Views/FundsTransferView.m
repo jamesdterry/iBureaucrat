@@ -13,7 +13,6 @@
 
 #import "FundsTransferView.h"
 #import "BCFormView.h"
-#import "CKUITools.h"
 
 
 @implementation FundsTransferView
@@ -36,8 +35,8 @@
 {
     [super layoutSubviews];
     _backgroundView.frame = self.bounds;
-    _navigationBar.width = self.width;
-    _formView.frame = CGRectMake(0, 50, self.width, self.height - 60);
+    _navigationBar.frame = CGRectMake(0, 0, self.frame.size.width, 44);
+    _formView.frame = CGRectMake(0, 50, self.frame.size.width, self.frame.size.height - 60);
     NSLog(@"Formview frame: %@", NSStringFromCGRect(_formView.frame));
 }
 

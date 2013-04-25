@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		682D86C2601D4C74B4DAAA20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0DADA2B6B24E6B9EAA6D47 /* libPods.a */; };
 		6B008FF0170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
 		6B008FF1170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
 		6B008FF2170C244A00DB737B /* BCFormSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD3170C244A00DB737B /* BCFormSection.m */; };
@@ -49,7 +48,6 @@
 		6BD31AF6170C189A007BAF4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD31AD1170C189A007BAF4F /* Foundation.framework */; };
 		6BD31AFE170C189A007BAF4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD31AFC170C189A007BAF4F /* InfoPlist.strings */; };
 		6BD31B01170C189A007BAF4F /* bureaucratTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD31B00170C189A007BAF4F /* bureaucratTests.m */; };
-		7F903C09747C4BF3BD28FE73 /* libPods-bureaucratTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48569C37ECA243059708F32B /* libPods-bureaucratTests.a */; };
 		BA79800FE4605A01EF2F9612 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798F030395FE3D91979212 /* Default@2x.png */; };
 		BA7980E45F032666A2719FD8 /* FundsTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79801171376769C364AEA7 /* FundsTransferViewController.m */; };
 		BA7983198A6E2880002DE087 /* FundsTransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7981E96002FCA868F2CD79 /* FundsTransferView.m */; };
@@ -151,7 +149,6 @@
 				6BD31AD0170C189A007BAF4F /* UIKit.framework in Frameworks */,
 				6BD31AD2170C189A007BAF4F /* Foundation.framework in Frameworks */,
 				6BD31AD4170C189A007BAF4F /* CoreGraphics.framework in Frameworks */,
-				682D86C2601D4C74B4DAAA20 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +160,6 @@
 				6BD31AF4170C189A007BAF4F /* SenTestingKit.framework in Frameworks */,
 				6BD31AF5170C189A007BAF4F /* UIKit.framework in Frameworks */,
 				6BD31AF6170C189A007BAF4F /* Foundation.framework in Frameworks */,
-				7F903C09747C4BF3BD28FE73 /* libPods-bureaucratTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

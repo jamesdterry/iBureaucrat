@@ -10,9 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-
 #import "BCPasswordCell.h"
-#import "CKUITools.h"
 
 
 @implementation BCPasswordCell
@@ -51,8 +49,9 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    _checker.x = self.x + self.width - 85;
-    _checker.y = 15;
+    CGPoint myPosition = self.frame.origin;
+    CGSize mySize = self.frame.size;
+    _checker.frame = CGRectMake(myPosition.x + mySize.width - 85, 15, _checker.frame.size.width, _checker.frame.size.height);
 }
 
 

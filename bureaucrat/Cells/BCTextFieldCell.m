@@ -12,9 +12,9 @@
 
 
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "BCTextFieldCell.h"
 #import "BCAbstractField.h"
-#import "CKUITools.h"
 
 
 @implementation BCTextFieldCell
@@ -72,15 +72,23 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    _label.x = self.x + 20;
-    _textField.x = _label.x + _label.width;
-    _textField.width = self.width - _label.x - _label.width - 50;
-    _readOnlyField.x = _label.x + _label.width;
-    _readOnlyField.width = self.width - _label.x - _label.width - 50;
 
-    _label.y = (self.height - _label.height) / 2;
-    _textField.y = ((self.height - _textField.height) / 2) + 5;
-    _readOnlyField.y = ((self.height - _textField.height) / 2);
+    CGPoint myPos = self.frame.origin;
+    CGSize mySize = self.frame.size;
+
+    CGSize labelSize = _label.frame.size;
+    CGSize textFieldSize = _textField.frame.size;
+    CGSize readOnlyFieldSize = _readOnlyField.frame.size;
+
+    CGPoint labelPos = (CGPoint) {myPos.x + 20, (mySize.height - labelSize.height) / 2};
+    _label.frame = CGRectMake(labelPos.x, labelPos.y, labelSize.width, labelSize.height);
+
+    CGPoint textFieldPos = (CGPoint) {labelPos.x + labelSize.width, (mySize.height - textFieldSize.height) / 2};
+    _textField.frame = CGRectMake(textFieldPos.x, textFieldPos.y, mySize.width - labelSize.width, textFieldSize.height);
+
+    CGPoint readOnlyFieldPos = (CGPoint) {labelPos.x + labelSize.width, (mySize.height - readOnlyFieldSize.height) / 2};
+    _readOnlyField.frame = CGRectMake(readOnlyFieldPos.x, readOnlyFieldPos.y, mySize.width - labelSize.width, readOnlyFieldSize.height);
+
 }
 
 - (void)setFocused:(BOOL)focused

@@ -17,7 +17,6 @@
 #import "BCFormView.h"
 #import "UITextField+AbstractFormCell.h"
 #import "BCForm.h"
-#import "CKUITools.h"
 
 
 @implementation BCTextField
@@ -35,7 +34,7 @@
 {
     BCTextFieldCell* cell = [[BCTextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     [cell.label setText:self.label];
-    cell.label.width = 100;
+    [cell.label setFrame:CGRectMake(cell.label.frame.origin.x, cell.label.frame.origin.y, 100, cell.label.frame.size.height)];
     cell.textField.returnKeyType = UIReturnKeyDefault;
     cell.textField.delegate = self;
     cell.textField.formCell = cell;

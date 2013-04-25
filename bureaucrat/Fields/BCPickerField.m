@@ -14,7 +14,6 @@
 #import "BCPickerField.h"
 #import "BCAbstractCell.h"
 #import "BCTextFieldCell.h"
-#import "CKUITools.h"
 #import <objc/message.h>
 
 
@@ -63,7 +62,7 @@
     BCTextFieldCell* cell = [[BCTextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     cell.editable = NO;
     [cell.label setText:self.label];
-    cell.label.width = 100;
+    [cell.label setFrame:CGRectMake(cell.label.frame.origin.x, cell.label.frame.origin.y, 100, cell.label.frame.size.height)];
     cell.textField.inputView = _pickerView;
     cell.backgroundColor = self.cellColor;
     cell.label.textColor = self.textColor;
@@ -142,7 +141,7 @@
 
 - (CGFloat)pickerView:(UIPickerView*)pickerView widthForComponent:(NSInteger)component
 {
-    return self.cell.width - 20;
+    return self.cell.frame.size.width - 20;
 }
 
 

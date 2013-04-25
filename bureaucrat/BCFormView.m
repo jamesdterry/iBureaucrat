@@ -18,7 +18,6 @@
 #import "BCAbstractField.h"
 #import "UITextField+AbstractFormCell.h"
 #import "BCForm.h"
-#import "CKUITools.h"
 #import "BCFormDelegate.h"
 
 
@@ -282,7 +281,7 @@
 - (CGRect)keyboardFrame;
 {
     CGSize keyboardSize = [self keyboardSize];
-    CGRect frame = CGRectMake(0, self.height - keyboardSize.height, self.width, keyboardSize.height);
+    CGRect frame = CGRectMake(0, self.frame.size.height - keyboardSize.height, self.frame.size.width, keyboardSize.height);
     return frame;
 }
 
@@ -296,14 +295,17 @@
 
 - (void)scrollToAccommodateCell:(BCAbstractCell*)cell
 {
-    CGPoint position = [self convertPoint:cell.position toView:nil];
+    CGPoint position = [self convertPoint:cell.frame.origin toView:nil];
     NSLog(@"Position: %@", NSStringFromCGPoint(position));
     CGFloat y = position.y;
     CGFloat scrollAmount = 0;
     CGFloat padding = 10.0;
+    CGSize screenSize = [self screenSizeWithOrientation:[UIApplication sharedApplication].statusBarOrientation];
+    CGSize accessorySize = _formNavigationAccessory.frame.size;
+    CGSize cellSize = cell.frame.size;
+
     CGFloat actualY =
-            [UIScreen mainScreen].currentSize.height - [self keyboardSize].height - _formNavigationAccessory.height - cell.height -
-                    -_tableView.contentOffset.y - padding;
+            screenSize.height - [self keyboardSize].height - accessorySize.height - cellSize.height - -_tableView.contentOffset.y - padding;
     CGFloat visibleY = actualY;
 
     if (y > visibleY)
@@ -340,4 +342,22 @@
     }
 }
 
+- (CGRect)rectWithOrientation:(int)orientation
+{
+    CGRect r = [UIScreen mainScreen].applicationFrame;
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        return CGRectMake(0, 0, r.size.height, r.size.width);
+    }
+    else
+    {
+        return CGRectMake(0, 0, r.size.width, r.size.height);
+    }
+}
+
+
+- (CGSize)screenSizeWithOrientation:(int)orientation
+{
+    return [self rectWithOrientation:orientation].size;
+}
 @end

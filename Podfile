@@ -1,7 +1,5 @@
 platform :ios, '5.0'
 
-pod 'CKUITools'
-
 # Test Dependencies
 
 target :bureaucratTests do

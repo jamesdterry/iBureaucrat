@@ -77,14 +77,16 @@
     CGSize mySize = self.frame.size;
 
     CGSize labelSize = _label.frame.size;
-    CGSize textFieldSize = _textField.frame.size;
     CGSize readOnlyFieldSize = _readOnlyField.frame.size;
 
     CGPoint labelPos = (CGPoint) {myPos.x + 20, (mySize.height - labelSize.height) / 2};
     _label.frame = CGRectMake(labelPos.x, labelPos.y, labelSize.width, labelSize.height);
 
-    CGPoint textFieldPos = (CGPoint) {labelPos.x + labelSize.width, (mySize.height - textFieldSize.height) / 2};
-    _textField.frame = CGRectMake(textFieldPos.x, textFieldPos.y, mySize.width - labelSize.width, textFieldSize.height);
+    CGSize textFieldSize = _textField.frame.size;
+    textFieldSize.width = mySize.width - labelSize.width;
+
+    CGPoint textFieldPos = (CGPoint) {labelPos.x + labelSize.width, ((mySize.height - textFieldSize.height) / 2) + 4};
+    _textField.frame = CGRectMake(textFieldPos.x, textFieldPos.y, textFieldSize.width, textFieldSize.height);
 
     CGPoint readOnlyFieldPos = (CGPoint) {labelPos.x + labelSize.width, (mySize.height - readOnlyFieldSize.height) / 2};
     _readOnlyField.frame = CGRectMake(readOnlyFieldPos.x, readOnlyFieldPos.y, mySize.width - labelSize.width, readOnlyFieldSize.height);

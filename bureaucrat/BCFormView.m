@@ -171,7 +171,11 @@
 
 - (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 44;
+    if ([[self tableView:_tableView titleForHeaderInSection:section] length] > 0)
+    {
+        return 44;
+    }
+    return 0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView

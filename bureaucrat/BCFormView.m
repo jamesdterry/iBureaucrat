@@ -19,6 +19,7 @@
 #import "UITextField+AbstractFormCell.h"
 #import "BCForm.h"
 #import "BCFormDelegate.h"
+#import "BCTextFieldCell.h"
 
 
 @interface BCFormView ()
@@ -92,7 +93,8 @@
 
 - (void)textFieldDidBeginEditing:(UITextField*)textField
 {
-    if (_currentlyEditingField != textField)
+    BCTextFieldCell* cell = textField.formCell;
+    if (_currentlyEditingField != textField && cell.editable)
     {
         [_currentlyEditingCell setFocused:NO];
         _selectedIndexPath = nil;
@@ -216,34 +218,39 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    [tableView endEditing:YES];
-    if ([indexPath compare:_selectedIndexPath] == NSOrderedSame)
+    BCFormSection* section = [_form.sections objectAtIndex:indexPath.section];
+    BCAbstractField* field = [[section fields] objectAtIndex:indexPath.row];
+    if (field.editable)
     {
-        [self scrollToAccommodateCell:_currentlyEditingCell];
-        NSLog(@"Currently editing field: %@", _currentlyEditingCell.textField);
-        [_currentlyEditingCell.textField resignFirstResponder];
-        [_currentlyEditingCell.textField becomeFirstResponder];
-    }
-    else
-    {
-        NSIndexPath* previousSelectedCellIndexPath = _selectedIndexPath;
-        _selectedIndexPath = indexPath;
-        [_tableView scrollToRowAtIndexPath:_selectedIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-        NSArray* rows;
-        if (previousSelectedCellIndexPath == nil)
+        [tableView endEditing:YES];
+        if ([indexPath compare:_selectedIndexPath] == NSOrderedSame)
         {
-            rows = [NSArray arrayWithObject:_selectedIndexPath];
+            [self scrollToAccommodateCell:_currentlyEditingCell];
+            NSLog(@"Currently editing field: %@", _currentlyEditingCell.textField);
+            [_currentlyEditingCell.textField resignFirstResponder];
+            [_currentlyEditingCell.textField becomeFirstResponder];
         }
         else
         {
-            rows = [NSArray arrayWithObjects:_selectedIndexPath, previousSelectedCellIndexPath, nil];
-        }
-        [tableView reloadRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationNone];
+            NSIndexPath* previousSelectedCellIndexPath = _selectedIndexPath;
+            _selectedIndexPath = indexPath;
+            [_tableView scrollToRowAtIndexPath:_selectedIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            NSArray* rows;
+            if (previousSelectedCellIndexPath == nil)
+            {
+                rows = [NSArray arrayWithObject:_selectedIndexPath];
+            }
+            else
+            {
+                rows = [NSArray arrayWithObjects:_selectedIndexPath, previousSelectedCellIndexPath, nil];
+            }
+            [tableView reloadRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationNone];
 
-        BOOL previousButtonEnabled = [_selectedIndexPath compare:[tableView firstIndexPath]] == NSOrderedSame ? NO : YES;
-        BOOL nextButtonEnabled = [_selectedIndexPath compare:[tableView lastIndexPath]] == NSOrderedSame ? NO : YES;
-        [_formNavigationAccessory.previousButton setEnabled:previousButtonEnabled];
-        [_formNavigationAccessory.nextButton setEnabled:nextButtonEnabled];
+            BOOL previousButtonEnabled = [_selectedIndexPath compare:[tableView firstIndexPath]] == NSOrderedSame ? NO : YES;
+            BOOL nextButtonEnabled = [_selectedIndexPath compare:[tableView lastIndexPath]] == NSOrderedSame ? NO : YES;
+            [_formNavigationAccessory.previousButton setEnabled:previousButtonEnabled];
+            [_formNavigationAccessory.nextButton setEnabled:nextButtonEnabled];
+        }
     }
 }
 

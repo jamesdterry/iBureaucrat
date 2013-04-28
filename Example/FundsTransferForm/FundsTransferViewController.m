@@ -95,6 +95,7 @@
 
     _referenceIdField = [BCTextField fieldWithLabel:@"Reference ID"];
     _anotherField = [BCTextField fieldWithLabel:@"Another Field"];
+    [_anotherField setEditable:NO];
 
     [detailsSection addFields:@[_amountToSend, _currency, _referenceIdField, _anotherField]];
     return detailsSection;

@@ -119,6 +119,7 @@
 {
     NSString* selected = [self displayValueFor:[_options objectAtIndex:row]];
     self.cell.textField.text = selected;
+    _value = [_options objectAtIndex:row];
 }
 
 - (NSInteger)pickerView:(UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger)component

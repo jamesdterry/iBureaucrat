@@ -20,12 +20,10 @@
 
 @interface BCTextFieldCell : BCAbstractCell
 {
-    UILabel* _label;
     UITextField *_textField;
     UILabel *_readOnlyField;
 }
 
-@property (nonatomic, strong, readonly) UILabel* label;
 @property (nonatomic, strong, readonly) UITextField *textField;
 @property (nonatomic) BOOL editable;
 

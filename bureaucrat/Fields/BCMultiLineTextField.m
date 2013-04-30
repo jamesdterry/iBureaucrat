@@ -1,13 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//  INFRAXIS
-//  Copyright 2013 Infraxis
+//  JASPER BLUES
+//  Copyright 2013 Jasper Blues
 //  All Rights Reserved.
 //
-//  NOTICE: Infraxis permits you to use, modify, and distribute this file
+//  NOTICE: Jasper Blues permits you to use, modify, and distribute this file
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+
 
 #import "BCMultiLineTextField.h"
 #import "BCTextViewCell.h"
@@ -19,12 +21,18 @@
 - (BCAbstractCell*)createCellInstance;
 {
     BCTextViewCell* cell = [[BCTextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-//    [cell.label setText:self.label];
-//    cell.label.width = 100;
+    [cell.label setText:self.label];
     cell.textField.returnKeyType = UIReturnKeyDefault;
     cell.textField.delegate = self;
     cell.textField.formCell = cell;
     return cell;
 }
+
+- (void)setValue:(NSString*)value
+{
+    BCTextViewCell* cell = (BCTextViewCell*) self.cell;
+    cell.textView.text = value;
+}
+
 
 @end

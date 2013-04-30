@@ -93,7 +93,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField*)textField
 {
-    BCTextFieldCell* cell = textField.formCell;
+    BCTextFieldCell* cell = (BCTextFieldCell*) textField.formCell;
     if (_currentlyEditingField != textField && cell.editable)
     {
         [_currentlyEditingCell setFocused:NO];
@@ -194,7 +194,7 @@
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    BCAbstractCell* cell = [self tableView:_tableView cellForRowAtIndexPath:indexPath];
+    BCAbstractCell* cell = (BCAbstractCell*) [self tableView:_tableView cellForRowAtIndexPath:indexPath];
     return [cell preferredHeight];
 }
 

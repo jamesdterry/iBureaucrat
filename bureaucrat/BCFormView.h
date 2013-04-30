@@ -35,6 +35,8 @@
 
 @property (nonatomic, strong, readonly) UIView* contentView;
 
+
+@property (nonatomic, strong, readonly) BCDefaultInputAccessory* formNavigationAccessory;
 @property (nonatomic, strong) BCForm* form;
 @property (nonatomic, strong) UIView* backgroundView;
 

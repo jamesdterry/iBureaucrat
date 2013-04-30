@@ -1,16 +1,21 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//  INFRAXIS
-//  Copyright 2013 Infraxis
+//  JASPER BLUES
+//  Copyright 2013 Jasper Blues
 //  All Rights Reserved.
 //
-//  NOTICE: Infraxis permits you to use, modify, and distribute this file
+//  NOTICE: Jasper Blues permits you to use, modify, and distribute this file
 //  in accordance with the terms of the license agreement accompanying it.
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+
+#import <CoreGraphics/CoreGraphics.h>
 #import "BCTextViewCell.h"
 #import "BCAbstractField.h"
+#import "BCFormSection.h"
+#import "BCForm.h"
+#import "BCFormView.h"
 
 /* ============================================================ Initializers ============================================================ */
 @implementation BCTextViewCell
@@ -21,6 +26,7 @@
     if (self)
     {
         _editable = YES;
+        [self initLabel];
         [self initTextView];
     }
     return self;
@@ -32,7 +38,8 @@
 {
     [super layoutSubviews];
     [_textView setTextColor:[UIColor blackColor]];
-    _textView.frame = CGRectMake(20, 5, 280, 66);
+    _label.frame = CGRectMake(20, 3, self.frame.size.width - 40, 20);
+    _textView.frame = CGRectMake(20, 3 + _label.frame.size.height, self.frame.size.width - 40, 100);
     [_textView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
 }
 
@@ -41,23 +48,25 @@
     [super setFocused:focused];
     if (focused)
     {
-//        [_label setTextColor:_field.selectedTextColor];
         [_textView setTextColor:_field.selectedTextColor];
+        UIView* view = (id) self.field.section.parent.view.formNavigationAccessory;
+        [_textView setInputAccessoryView:view];
         if (_editable)
         {
-            NSLog(@"Let's edit!!!!");
-            [self bringSubviewToFront:_textView];
+            [_textView setEditable:YES];
             [_textView becomeFirstResponder];
             [_textView setTextColor:[UIColor blackColor]];
         }
     }
     else
     {
-        NSLog(@"What the fuck?");
-//        [_label setTextColor:_field.textColor];
+        [_textView setEditable:NO];
         [_textView setTextColor:_field.textColor];
         [self.textField performSelectorOnMainThread:@selector(resignFirstResponder) withObject:nil waitUntilDone:NO];
     }
+
+    [_label setTextColor:_field.textColor];
+    [_textView setTextColor:_field.textColor];
 }
 
 - (CGFloat)preferredHeight
@@ -67,21 +76,26 @@
 
 
 /* ============================================================ Private Methods ========================================================= */
+- (void)initLabel
+{
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 90, 30)];
+    [_label setBackgroundColor:[UIColor clearColor]];
+    [_label setFont:[UIFont boldSystemFontOfSize:14]];
+    [_label setTextColor:[UIColor darkGrayColor]];
+    [self addSubview:_label];
+}
+
+
 - (void)initTextView
 {
     _textView = [[UITextView alloc] initWithFrame:CGRectZero];
     [_textView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [_textView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [_textView setFont:[UIFont systemFontOfSize:16]];
-    [_textView setBackgroundColor:[UIColor colorWithRed:.7 green:0.7 blue:0.8 alpha:1]];
-//    [_textView setAutocapitalizationType:UITextAutocapitalizationTypeNone];
-//    [_textView setAutocorrectionType:UITextAutocorrectionTypeNo];
-//    [_textView setReturnKeyType:UIReturnKeyDone];
-//    [_textView setTextColor:[UIColor blackColor]];
+    [_textView setFont:[UIFont systemFontOfSize:15]];
+    [_textView setBackgroundColor:[UIColor clearColor]];
     [self addSubview:_textView];
     [self bringSubviewToFront:_textView];
 }
-
 
 
 @end

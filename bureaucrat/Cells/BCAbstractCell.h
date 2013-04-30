@@ -23,7 +23,10 @@
 @interface BCAbstractCell : UITableViewCell
 {
     __weak BCAbstractField* _field;
+    UILabel* _label;
 }
+
+@property(nonatomic, strong, readonly) UILabel* label;
 
 /**
 * The index path of this cell, within the form.

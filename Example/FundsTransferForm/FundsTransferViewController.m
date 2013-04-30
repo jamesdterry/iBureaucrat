@@ -78,6 +78,8 @@
     [_sendBy addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
 
     _notes = [BCMultiLineTextField fieldWithLabel:@"Notes"];
+    [_notes setEditable:NO];
+    [_notes setValue:@"You don't need a weather man to know which way the wind blows. Bob Dylayn said that, 40 years ago"];
     [transportDetailsSection addFields:@[_sendBy, _notes]];
     return transportDetailsSection;
 }

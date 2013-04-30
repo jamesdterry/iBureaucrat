@@ -58,12 +58,16 @@
 		BA7984B7C5B12A127310A1E4 /* background-gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA79898F0829634B21EDA33F /* background-gradient@2x.png */; };
 		BA7986C58B41B03692C1E2F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798AE2780FE03F707BEC75 /* Default.png */; };
 		BA798742848A56F02C4EFAAD /* FundsTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79801171376769C364AEA7 /* FundsTransferViewController.m */; };
+		BA79877A26796737DC776C61 /* BCTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798399F8AD9588D26D3A31 /* BCTextViewCell.m */; };
 		BA79885DDCB7FA7BF1C612C6 /* background-gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798A4DB42F12C72C18A1FA /* background-gradient.png */; };
 		BA79893016C666A9E91E9B2F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798EBE601A207D3A2E3752 /* Default-568h@2x.png */; };
+		BA798B7DDCA78F23B8C4DAEE /* BCTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798399F8AD9588D26D3A31 /* BCTextViewCell.m */; };
 		BA798C6640C63D93116918CC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798F030395FE3D91979212 /* Default@2x.png */; };
 		BA798D4C1753F245ED71E5BE /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7981F8D8908580B66253FE /* Vehicle.m */; };
+		BA798E7B0DDEC941EE73E5D4 /* BCMultiLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7984CEDD99AD1E2C3D4F7D /* BCMultiLineTextField.m */; };
 		BA798EC034FBFF653E9C6532 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798AE2780FE03F707BEC75 /* Default.png */; };
 		BA798F08DDD6101C8413FCA0 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7981F8D8908580B66253FE /* Vehicle.m */; };
+		BA798F32104142A103243521 /* BCMultiLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7984CEDD99AD1E2C3D4F7D /* BCMultiLineTextField.m */; };
 		BA798F4A76EE34D7C0E87FF7 /* FundsTransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7981E96002FCA868F2CD79 /* FundsTransferView.m */; };
 /* End PBXBuildFile section */
 
@@ -129,9 +133,13 @@
 		9A768AB84C024EBF87E9657C /* Pods-bureaucratTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bureaucratTests.xcconfig"; path = "Pods/Pods-bureaucratTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		A043C0135FFA4C95A404B63E /* libPods-bureaucratTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-bureaucratTests.a"; path = "libPods-bureaucratTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA79801171376769C364AEA7 /* FundsTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundsTransferViewController.m; sourceTree = "<group>"; };
+		BA7980CA271AEB51B8380BF6 /* BCMultiLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMultiLineTextField.h; sourceTree = "<group>"; };
 		BA7981E96002FCA868F2CD79 /* FundsTransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundsTransferView.m; sourceTree = "<group>"; };
 		BA7981F8D8908580B66253FE /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
 		BA798277C36EB2822494DE8C /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		BA798399F8AD9588D26D3A31 /* BCTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTextViewCell.m; sourceTree = "<group>"; };
+		BA7983B2C46A0058589AE5C9 /* BCTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTextViewCell.h; sourceTree = "<group>"; };
+		BA7984CEDD99AD1E2C3D4F7D /* BCMultiLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMultiLineTextField.m; sourceTree = "<group>"; };
 		BA7988CFAE496EC9E8928FC4 /* FundsTransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FundsTransferViewController.h; sourceTree = "<group>"; };
 		BA79898F0829634B21EDA33F /* background-gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-gradient@2x.png"; sourceTree = "<group>"; };
 		BA798A47A705541F281E3617 /* BCFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormDelegate.h; sourceTree = "<group>"; };
@@ -191,6 +199,8 @@
 				6B008FE0170C244A00DB737B /* BCPasswordCell.m */,
 				6B008FE1170C244A00DB737B /* BCTextFieldCell.h */,
 				6B008FE2170C244A00DB737B /* BCTextFieldCell.m */,
+				BA7983B2C46A0058589AE5C9 /* BCTextViewCell.h */,
+				BA798399F8AD9588D26D3A31 /* BCTextViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -206,6 +216,8 @@
 				6B008FE9170C244A00DB737B /* BCPickerField.m */,
 				6B008FEA170C244A00DB737B /* BCTextField.h */,
 				6B008FEB170C244A00DB737B /* BCTextField.m */,
+				BA7980CA271AEB51B8380BF6 /* BCMultiLineTextField.h */,
+				BA7984CEDD99AD1E2C3D4F7D /* BCMultiLineTextField.m */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -520,6 +532,8 @@
 				BA798742848A56F02C4EFAAD /* FundsTransferViewController.m in Sources */,
 				BA798F4A76EE34D7C0E87FF7 /* FundsTransferView.m in Sources */,
 				BA798D4C1753F245ED71E5BE /* Vehicle.m in Sources */,
+				BA798E7B0DDEC941EE73E5D4 /* BCMultiLineTextField.m in Sources */,
+				BA798B7DDCA78F23B8C4DAEE /* BCTextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +559,8 @@
 				BA7980E45F032666A2719FD8 /* FundsTransferViewController.m in Sources */,
 				BA7983198A6E2880002DE087 /* FundsTransferView.m in Sources */,
 				BA798F08DDD6101C8413FCA0 /* Vehicle.m in Sources */,
+				BA798F32104142A103243521 /* BCMultiLineTextField.m in Sources */,
+				BA79877A26796737DC776C61 /* BCTextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

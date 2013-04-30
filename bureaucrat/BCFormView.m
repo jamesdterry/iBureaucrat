@@ -192,6 +192,13 @@
     return [[formSection fields] count];
 }
 
+- (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    BCAbstractCell* cell = [self tableView:_tableView cellForRowAtIndexPath:indexPath];
+    return [cell preferredHeight];
+}
+
+
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     BCFormSection* section = [_form.sections objectAtIndex:indexPath.section];

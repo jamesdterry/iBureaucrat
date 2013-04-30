@@ -19,6 +19,7 @@
 #import "BCFormView.h"
 #import "Vehicle.h"
 #import "BCPasswordField.h"
+#import "BCMultiLineTextField.h"
 
 @interface FundsTransferViewController ()
 
@@ -76,7 +77,7 @@
     [_sendBy addOption:[Vehicle vehicleWithName:@"Scoundrel" traits:@"reliable"]];
     [_sendBy addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
 
-    _notes = [BCTextField fieldWithLabel:@"Notes"];
+    _notes = [BCMultiLineTextField fieldWithLabel:@"Notes"];
     [transportDetailsSection addFields:@[_sendBy, _notes]];
     return transportDetailsSection;
 }

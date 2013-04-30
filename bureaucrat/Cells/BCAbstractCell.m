@@ -56,5 +56,11 @@
 }
 
 
+- (CGFloat)preferredHeight
+{
+    return 44.0;
+}
+
+
 
 @end

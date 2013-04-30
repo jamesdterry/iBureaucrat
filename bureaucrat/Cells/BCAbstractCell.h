@@ -55,5 +55,6 @@
 */
 - (UITextField*)textField;
 
+- (CGFloat)preferredHeight;
 
 @end

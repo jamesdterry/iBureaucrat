@@ -141,7 +141,7 @@
 {
     if ([_options count] == 0)
     {
-        return @"<empty list>";
+        return @"";
     }
     else
     {

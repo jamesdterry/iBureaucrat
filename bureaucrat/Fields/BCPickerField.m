@@ -117,14 +117,17 @@
 
 - (void)pickerView:(UIPickerView*)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSString* selected = [self displayValueFor:[_options objectAtIndex:row]];
-    self.cell.textField.text = selected;
-    _value = [_options objectAtIndex:row];
+    if ([_options count] > 0)
+    {
+        NSString* selected = [self displayValueFor:[_options objectAtIndex:row]];
+        self.cell.textField.text = selected;
+        _value = [_options objectAtIndex:row];
+    }
 }
 
 - (NSInteger)pickerView:(UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [_options count];
+    return [_options count] == 0 ? 1 : [_options count];
 }
 
 
@@ -136,7 +139,14 @@
 
 - (NSString*)pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [self displayValueFor:[_options objectAtIndex:row]];
+    if ([_options count] == 0)
+    {
+        return @"<empty list>";
+    }
+    else
+    {
+        return [self displayValueFor:[_options objectAtIndex:row]];
+    }
 }
 
 

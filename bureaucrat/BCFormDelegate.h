@@ -16,6 +16,9 @@
 
 @protocol BCFormDelegate <BCInputAccessoryDelegate>
 
+
+@optional
+
 - (void)fieldReceivedFocus:(BCAbstractField*)field;
 
 - (void)fieldLostFocus:(BCAbstractField*)field;

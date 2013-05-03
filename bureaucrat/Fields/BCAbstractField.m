@@ -106,6 +106,24 @@
     }
 }
 
+- (void)formCellWasFocused:(BCAbstractCell*)cell
+{
+    id<BCFormDelegate> delegate = self.section.parent.delegate;
+    if ([delegate respondsToSelector:@selector(fieldReceivedFocus:)])
+    {
+        [delegate fieldReceivedFocus:self];
+    }
+}
+
+- (void)formCellLostFocus:(BCAbstractCell*)cell
+{
+    id<BCFormDelegate> delegate = self.section.parent.delegate;
+    if ([delegate respondsToSelector:@selector(fieldLostFocus:)])
+    {
+        [delegate fieldLostFocus:self];
+    }
+}
+
 /* ====================================================================================================================================== */
 #pragma mark - Abstract methods
 
@@ -129,25 +147,6 @@
 {
     _value = value;
     [self.cell layoutIfNeeded];
-}
-
-
-- (void)formCellWasFocused:(BCAbstractCell*)cell
-{
-    id<BCFormDelegate> delegate = self.section.parent.delegate;
-    if ([delegate respondsToSelector:@selector(fieldReceivedFocus:)])
-    {
-        [delegate fieldReceivedFocus:self];
-    }
-}
-
-- (void)formCellLostFocus:(BCAbstractCell*)cell
-{
-    id<BCFormDelegate> delegate = self.section.parent.delegate;
-    if ([delegate respondsToSelector:@selector(fieldLostFocus:)])
-    {
-        [delegate fieldLostFocus:self];
-    }
 }
 
 

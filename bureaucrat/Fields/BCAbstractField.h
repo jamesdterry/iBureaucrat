@@ -120,15 +120,8 @@
 
 #pragma mark - Events
 
-/**
-* Called with the field receives focus
-*/
-- (void)formCellWasFocused;
+- (void)formCellWasFocused:(BCAbstractCell*)cell;
 
-/**
-* Called when the field loses focus
-*/
-- (void)formCellLostFocus;
-
+- (void)formCellLostFocus:(BCAbstractCell*)cell;
 
 @end

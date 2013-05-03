@@ -46,8 +46,12 @@
     {
         [self setBackgroundColor:_field.cellColor];
         [[self textLabel] setTextColor:_field.textColor];
-        [_delegate formCellLostFocus:self];
+        if (_focused)
+        {
+            [_delegate formCellLostFocus:self];
+        }
     }
+    _focused = focused;
 }
 
 - (UITextField*)textField

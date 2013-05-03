@@ -12,8 +12,12 @@
 #import <Foundation/Foundation.h>
 #import "BCInputAccessoryDelegate.h"
 
+@class BCAbstractField;
+
 @protocol BCFormDelegate <BCInputAccessoryDelegate>
 
+- (void)fieldReceivedFocus:(BCAbstractField*)field;
 
+- (void)fieldLostFocus:(BCAbstractField*)field;
 
 @end

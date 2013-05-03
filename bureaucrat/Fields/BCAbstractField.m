@@ -14,6 +14,8 @@
 #import "BCTextFieldCell.h"
 #import "BCTextField.h"
 #import "BCFormSection.h"
+#import "BCForm.h"
+#import "BCFormDelegate.h"
 
 
 @implementation BCAbstractField
@@ -129,24 +131,23 @@
     [self.cell layoutIfNeeded];
 }
 
-- (void)formCellWasFocused
-{
-
-}
-
-- (void)formCellLostFocus
-{
-
-}
 
 - (void)formCellWasFocused:(BCAbstractCell*)cell
 {
-
+    id<BCFormDelegate> delegate = self.section.parent.delegate;
+    if ([delegate respondsToSelector:@selector(fieldReceivedFocus:)])
+    {
+        [delegate fieldReceivedFocus:self];
+    }
 }
 
 - (void)formCellLostFocus:(BCAbstractCell*)cell
 {
-
+    id<BCFormDelegate> delegate = self.section.parent.delegate;
+    if ([delegate respondsToSelector:@selector(fieldLostFocus:)])
+    {
+        [delegate fieldLostFocus:self];
+    }
 }
 
 

@@ -67,6 +67,16 @@
     NSLog(@"Delegate call for next");
 }
 
+- (void)fieldReceivedFocus:(BCAbstractField*)field
+{
+    NSLog(@"Field received focus: %@", field);
+}
+
+- (void)fieldLostFocus:(BCAbstractField*)field
+{
+    NSLog(@"Field lost focus: %@", field);
+}
+
 
 /* ============================================================ Private Methods ========================================================= */
 - (BCFormSection*)createTransportDetailsSection

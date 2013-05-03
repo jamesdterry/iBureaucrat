@@ -24,6 +24,7 @@
 {
     __weak BCAbstractField* _field;
     UILabel* _label;
+    BOOL _focused;
 }
 
 @property(nonatomic, strong, readonly) UILabel* label;

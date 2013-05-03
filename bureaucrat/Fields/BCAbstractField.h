@@ -117,4 +117,18 @@
 */
 - (void)setValue:(id<NSObject>)value;
 
+
+#pragma mark - Events
+
+/**
+* Called with the field receives focus
+*/
+- (void)formCellWasFocused;
+
+/**
+* Called when the field loses focus
+*/
+- (void)formCellLostFocus;
+
+
 @end

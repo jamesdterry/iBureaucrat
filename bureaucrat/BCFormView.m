@@ -41,7 +41,7 @@
         [self setClipsToBounds:YES];
         [self initContentView];
         [self initTableView];
-        [self initKeyboardAccessory];
+        [self initNavigationAccessory];
     }
     return self;
 }
@@ -53,6 +53,7 @@
     _form = form;
     _form.view = self;
     NSLog(@"Using form: %@", form);
+    [_formNavigationAccessory.doneButton setTintColor:_form.colorScheme.buttonTintColor];
 }
 
 - (void)setCurrentlyEditingCell:(BCAbstractCell*)currentlyEditingCell
@@ -284,7 +285,7 @@
     [_contentView addSubview:_tableView];
 }
 
-- (void)initKeyboardAccessory
+- (void)initNavigationAccessory
 {
     _formNavigationAccessory = [BCDefaultInputAccessory viewWithDelegate:self];
 }

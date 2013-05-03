@@ -13,43 +13,33 @@
 
 #import "BCForm.h"
 #import "BCFormSection.h"
-#import "BCInputAccessoryDelegate.h"
+#import "BCColorScheme.h"
 
 
 @implementation BCForm
 
 /* =========================================================== Class Methods ============================================================ */
-+ (id)formWithCellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor sectionTitleColor:(UIColor*)sectionTitleColor
-        textColor:(UIColor*)textColor selectedTextColor:(UIColor*)selectedTextColor;
++ (id)formWithColorScheme:(BCColorScheme*)colorScheme
 {
-    return [[self alloc]
-            initWithCellColor:cellColor selectedCellColor:selectedCellColor sectionTitleColor:sectionTitleColor textColor:textColor
-            selectedTextColor:selectedTextColor];
+    return [[self alloc] initWithColorScheme:colorScheme];
 }
 
 
 /* ============================================================ Initializers ============================================================ */
-- (id)initWithCellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor sectionTitleColor:(UIColor*)sectionTitleColor
-        textColor:(UIColor*)textColor selectedTextColor:(UIColor*)selectedTextColor
+- (id)initWithColorScheme:(BCColorScheme*)colorScheme;
 {
     self = [super init];
     if (self)
     {
         _sections = [[NSMutableArray alloc] init];
-        _cellColor = cellColor;
-        _selectedCellColor = selectedCellColor;
-        _sectionTitleColor = sectionTitleColor;
-        _textColor = textColor;
-        _selectedTextColor = selectedTextColor;
+        _colorScheme = colorScheme;
     }
     return self;
 }
 
 - (id)init
 {
-    return [self initWithCellColor:[UIColor whiteColor] selectedCellColor:[UIColor colorWithRed:0.639 green:0.831 blue:0.486 alpha:1.0]
-            sectionTitleColor:[UIColor colorWithRed:0.639 green:0.831 blue:0.486 alpha:1.0] textColor:[UIColor darkGrayColor]
-            selectedTextColor:[UIColor colorWithRed:51 green:51 blue:51 alpha:1.0]];
+    return [self initWithColorScheme:[BCColorScheme defaultColorScheme]];
 }
 
 /* ========================================================== Interface Methods ========================================================= */

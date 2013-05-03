@@ -73,9 +73,9 @@
 {
     BCFormSection* transportDetailsSection = [BCFormSection sectionWithTitle:@"Transport Details"];
     _sendBy = [BCPickerField fieldWithLabel:@"Send by"];
-//    [_sendBy addOption:[Vehicle vehicleWithName:@"Horse" traits:@"grain tax"]];
-//    [_sendBy addOption:[Vehicle vehicleWithName:@"Scoundrel" traits:@"reliable"]];
-//    [_sendBy addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Horse" traits:@"grain tax"]];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Scoundrel" traits:@"reliable"]];
+    [_sendBy addOption:[Vehicle vehicleWithName:@"Ship" traits:@"not good over-land"]];
 
     _notes = [BCMultiLineTextField fieldWithLabel:@"Notes"];
     [_notes setEditable:NO];

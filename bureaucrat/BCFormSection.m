@@ -14,6 +14,7 @@
 #import "BCFormSection.h"
 #import "BCAbstractField.h"
 #import "BCForm.h"
+#import "BCColorScheme.h"
 
 
 @implementation BCFormSection
@@ -82,27 +83,27 @@
 
 - (UIColor*)cellColor
 {
-    return _cellColor == nil ? [_parent cellColor] : _cellColor;
+    return _cellColor == nil ? [_parent.colorScheme cellColor] : _cellColor;
 }
 
 - (UIColor*)selectedCellColor
 {
-    return _selectedCellColor == nil ? [_parent selectedCellColor] : _cellColor;
+    return _selectedCellColor == nil ? [_parent.colorScheme selectedCellColor] : _cellColor;
 }
 
 - (UIColor*)sectionTitleColor
 {
-    return _sectionTitleColor == nil ? [_parent sectionTitleColor] : _sectionTitleColor;
+    return _sectionTitleColor == nil ? [_parent.colorScheme sectionTitleColor] : _sectionTitleColor;
 }
 
 - (UIColor*)textColor
 {
-    return _textColor == nil ? [_parent textColor] : _textColor;
+    return _textColor == nil ? [_parent.colorScheme defaultTextColor] : _textColor;
 }
 
 - (UIColor*)selectedTextColor
 {
-    return _selectedTextColor == nil ? [_parent selectedTextColor] : _selectedTextColor;
+    return _selectedTextColor == nil ? [_parent.colorScheme selectedTextColor] : _selectedTextColor;
 }
 
 

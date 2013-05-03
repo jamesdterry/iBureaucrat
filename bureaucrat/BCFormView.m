@@ -20,6 +20,7 @@
 #import "BCForm.h"
 #import "BCFormDelegate.h"
 #import "BCTextFieldCell.h"
+#import "BCColorScheme.h"
 
 
 @interface BCFormView ()
@@ -157,7 +158,7 @@
 
     UILabel* headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 20, 200, 15)];
     headerLabel.backgroundColor = [UIColor clearColor];
-    headerLabel.textColor = _form.sectionTitleColor;
+    headerLabel.textColor = _form.colorScheme.sectionTitleColor;
     headerLabel.font = [UIFont systemFontOfSize:18];
     headerLabel.text = [self tableView:tableView titleForHeaderInSection:section];
     [headerLabel sizeToFit];

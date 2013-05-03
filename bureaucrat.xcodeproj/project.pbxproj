@@ -53,6 +53,8 @@
 		BA7980E45F032666A2719FD8 /* FundsTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79801171376769C364AEA7 /* FundsTransferViewController.m */; };
 		BA7983198A6E2880002DE087 /* FundsTransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7981E96002FCA868F2CD79 /* FundsTransferView.m */; };
 		BA79837D1932E54157F90635 /* background-gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA79898F0829634B21EDA33F /* background-gradient@2x.png */; };
+		BA7983AC4CC989195E8C0CF7 /* BCColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798084CD9772FBF7B47167 /* BCColorScheme.m */; };
+		BA7983DCD44357D672B62514 /* BCColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BA798084CD9772FBF7B47167 /* BCColorScheme.m */; };
 		BA79847831FF13E234656A09 /* background-gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798A4DB42F12C72C18A1FA /* background-gradient.png */; };
 		BA798489BCE5A6662DDAC73D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA798EBE601A207D3A2E3752 /* Default-568h@2x.png */; };
 		BA7984B7C5B12A127310A1E4 /* background-gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA79898F0829634B21EDA33F /* background-gradient@2x.png */; };
@@ -133,6 +135,7 @@
 		9A768AB84C024EBF87E9657C /* Pods-bureaucratTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bureaucratTests.xcconfig"; path = "Pods/Pods-bureaucratTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		A043C0135FFA4C95A404B63E /* libPods-bureaucratTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-bureaucratTests.a"; path = "libPods-bureaucratTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA79801171376769C364AEA7 /* FundsTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundsTransferViewController.m; sourceTree = "<group>"; };
+		BA798084CD9772FBF7B47167 /* BCColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCColorScheme.m; sourceTree = "<group>"; };
 		BA7980CA271AEB51B8380BF6 /* BCMultiLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMultiLineTextField.h; sourceTree = "<group>"; };
 		BA7981E96002FCA868F2CD79 /* FundsTransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundsTransferView.m; sourceTree = "<group>"; };
 		BA7981F8D8908580B66253FE /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 		BA798A47A705541F281E3617 /* BCFormDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFormDelegate.h; sourceTree = "<group>"; };
 		BA798A4DB42F12C72C18A1FA /* background-gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-gradient.png"; sourceTree = "<group>"; };
 		BA798AE2780FE03F707BEC75 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BA798CDF4DA60052019078A9 /* BCColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCColorScheme.h; sourceTree = "<group>"; };
 		BA798EBE601A207D3A2E3752 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BA798F030395FE3D91979212 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BA798FC68ADD18D9321B9DEF /* FundsTransferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FundsTransferView.h; sourceTree = "<group>"; };
@@ -300,6 +304,7 @@
 				6B008FE3170C244A00DB737B /* Fields */,
 				6B008FEC170C244A00DB737B /* InputAccessory */,
 				BA798A47A705541F281E3617 /* BCFormDelegate.h */,
+				BA7980AE915E501142523F68 /* ColorScheme */,
 			);
 			path = bureaucrat;
 			sourceTree = "<group>";
@@ -331,6 +336,15 @@
 				BA798899D7D42F7CCAE96E16 /* Views */,
 			);
 			path = FundsTransferForm;
+			sourceTree = "<group>";
+		};
+		BA7980AE915E501142523F68 /* ColorScheme */ = {
+			isa = PBXGroup;
+			children = (
+				BA798084CD9772FBF7B47167 /* BCColorScheme.m */,
+				BA798CDF4DA60052019078A9 /* BCColorScheme.h */,
+			);
+			path = ColorScheme;
 			sourceTree = "<group>";
 		};
 		BA798553E561C983BCCA5084 /* Model */ = {
@@ -534,6 +548,7 @@
 				BA798D4C1753F245ED71E5BE /* Vehicle.m in Sources */,
 				BA798E7B0DDEC941EE73E5D4 /* BCMultiLineTextField.m in Sources */,
 				BA798B7DDCA78F23B8C4DAEE /* BCTextViewCell.m in Sources */,
+				BA7983AC4CC989195E8C0CF7 /* BCColorScheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +576,7 @@
 				BA798F08DDD6101C8413FCA0 /* Vehicle.m in Sources */,
 				BA798F32104142A103243521 /* BCMultiLineTextField.m in Sources */,
 				BA79877A26796737DC776C61 /* BCTextViewCell.m in Sources */,
+				BA7983DCD44357D672B62514 /* BCColorScheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

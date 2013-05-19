@@ -29,6 +29,8 @@
 
 @property(nonatomic, strong, readonly) UILabel* label;
 
+@property(nonatomic) BOOL labelHidden;
+
 /**
 * The index path of this cell, within the form.
 */
@@ -60,5 +62,6 @@
 - (UITextField*)textField;
 
 - (CGFloat)preferredHeight;
+
 
 @end

@@ -278,7 +278,6 @@
     UIView* backgroundView = [[UIView alloc] init];
     [backgroundView setBackgroundColor:[UIColor clearColor]];
     [_tableView setBackgroundView:backgroundView];
-//    [_tableView setScrollEnabled:NO];
 
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -303,6 +302,11 @@
     CGSize keyboardSize = [self keyboardSize];
     CGRect frame = CGRectMake(0, self.frame.size.height - keyboardSize.height, self.frame.size.width, keyboardSize.height);
     return frame;
+}
+
+- (void)setScrollable:(BOOL)isScrollable
+{
+  [_tableView setScrollEnabled:isScrollable];
 }
 
 

@@ -39,6 +39,11 @@
     cell.textField.delegate = self;
     cell.textField.formCell = cell;
     cell.label.textColor = [UIColor redColor];
+  
+  
+    if(self.label == nil){
+      cell.labelHidden = YES;
+    }
     return cell;
 }
 

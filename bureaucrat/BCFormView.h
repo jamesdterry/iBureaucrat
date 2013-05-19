@@ -40,7 +40,8 @@
 @property (nonatomic, strong) BCForm* form;
 @property (nonatomic, strong) UIView* backgroundView;
 
-
 - (CGRect)keyboardFrame;
+
+- (void)setScrollable:(BOOL)isScrollable;
 
 @end

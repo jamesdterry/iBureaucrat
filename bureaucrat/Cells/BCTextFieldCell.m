@@ -78,6 +78,10 @@
 
     CGSize labelSize = _label.frame.size;
     CGSize readOnlyFieldSize = _readOnlyField.frame.size;
+  
+    if(self.labelHidden){
+      labelSize = CGSizeZero;
+    }
 
     CGPoint labelPos = (CGPoint) {myPos.x + 20, (mySize.height - labelSize.height) / 2};
     _label.frame = CGRectMake(labelPos.x, labelPos.y, labelSize.width, labelSize.height);

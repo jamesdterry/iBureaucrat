@@ -100,6 +100,7 @@ There are a few fantastic forms libraries for iOS. This one attempts to be:
          
 ### With contributions from: 
 
+* <a href="https://github.com/johndoran">John Doran</a> - various improvements. 
 * ___Your name here!!!!!!!___ 
 
 Thanks!!!

@@ -5,6 +5,7 @@ A forms library for iOS.
 
 ##Status?
 
+* **Update:** The <a href="http://escoz.com/open-source/quickdialog">QuickDialog</a> project looks very promising. . I wasn't aware of it when I started this project. And I've only just started checking it out, but they seem to be further along. If it works for me, I'll probably stop supporting this project. 
 * Still alpha, but stable API
 * iPad not yet supported (though this will be very simple to add). 
 

@@ -5,7 +5,7 @@ A forms library for iOS.
 
 ##Status?
 
-* **Update!!**: Sorry, I haven't had time to invest in this project lately. . . but have been checking out QuickDialog (https://github.com/escoz/quickdialog), which I didn't know about when I started this project. 
+* **Update!!**: I haven't had time to invest in this project lately. . . but have been checking out QuickDialog (https://github.com/escoz/quickdialog), which I didn't know about when I started this project. 
 * Still alpha, but stable API
 * iPad not yet supported (though this will be very simple to add). 
 

@@ -20,7 +20,9 @@
 
 @implementation BCAbstractField
 
-/* =========================================================== Class Methods ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Class Methods
+
 + (id)fieldWithLabel:(NSString*)label
 {
     return [[self alloc] initWithLabel:label cellColor:nil selectedCellColor:nil sectionTitleColor:nil];
@@ -32,7 +34,9 @@
     return [[self alloc] initWithLabel:label cellColor:cellColor selectedCellColor:selectedCellColor sectionTitleColor:sectionTitleColor];
 }
 
-/* ============================================================ Initializers ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
+
 - (id)initWithLabel:(NSString*)label cellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor
         sectionTitleColor:(UIColor*)sectionTitleColor
 {
@@ -53,7 +57,9 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-/* ========================================================== Interface Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Interface Methods
+
 - (BCAbstractCell*)cell
 {
     if (_cell == nil)
@@ -150,7 +156,9 @@
 }
 
 
-/* ============================================================ Utility Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Utility Methods
+
 - (NSString*)description
 {
     NSMutableString* description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];

@@ -18,14 +18,18 @@
 
 @implementation BCForm
 
-/* =========================================================== Class Methods ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Class Methods
+
 + (id)formWithColorScheme:(BCColorScheme*)colorScheme
 {
     return [[self alloc] initWithColorScheme:colorScheme];
 }
 
 
-/* ============================================================ Initializers ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
+
 - (id)initWithColorScheme:(BCColorScheme*)colorScheme;
 {
     self = [super init];
@@ -42,7 +46,9 @@
     return [self initWithColorScheme:[BCColorScheme defaultColorScheme]];
 }
 
-/* ========================================================== Interface Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Interface Methods
+
 - (NSArray*)sections
 {
     return [_sections copy];
@@ -55,8 +61,14 @@
     return section;
 }
 
+- (void)build
+{
 
-/* ============================================================ Utility Methods ========================================================= */
+}
+
+/* ====================================================================================================================================== */
+#pragma mark - Utility Methods
+
 - (NSString*)description
 {
     NSMutableString* description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];

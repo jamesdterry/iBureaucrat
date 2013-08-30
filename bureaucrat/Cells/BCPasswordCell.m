@@ -15,7 +15,9 @@
 
 @implementation BCPasswordCell
 
-/* ============================================================ Initializers ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -28,7 +30,9 @@
 }
 
 
-/* ========================================================== Interface Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Interface Methods
+
 - (void)setAuthenticated:(BOOL)authenticated
 {
     _checker.hidden = !authenticated;
@@ -55,7 +59,9 @@
 }
 
 
-/* ============================================================ Private Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Private Methods
+
 - (void)initChecker
 {
     _checker = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"green_checker"]];

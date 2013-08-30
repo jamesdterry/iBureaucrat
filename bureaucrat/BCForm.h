@@ -20,7 +20,11 @@
 @protocol BCFormDelegate;
 @class BCColorScheme;
 
-
+/**
+* Models a form for presentation in a BCFormView. As well as being used directly - adding fields and sections, this class can be
+* sub-classed, in order to encapsulate UIView elements. It provides the abstract build method, which can be over-ridden to build a custom
+* form.
+*/
 @interface BCForm : NSObject
 {
     NSMutableArray* _sections;
@@ -35,5 +39,11 @@
 + (id)formWithColorScheme:(BCColorScheme*)colorScheme;
 
 - (BCFormSection*)addSection:(BCFormSection*)section;
+
+/**
+* Abstract method - can be overwritten in sub-classes to build a form. This allows UIView components from the form to be encapsulated
+* within the sub-class.
+*/
+- (void)build;
 
 @end

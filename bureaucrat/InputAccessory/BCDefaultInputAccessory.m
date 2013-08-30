@@ -17,6 +17,9 @@
 
 @implementation BCDefaultInputAccessory
 
+/* ====================================================================================================================================== */
+#pragma mark - Class Methods
+
 + (BCDefaultInputAccessory*)viewWithDelegate:(id<BCInputAccessoryDelegate>)delegate;
 {
     BCDefaultInputAccessory* view = [[[self class] alloc] initWithFrame:CGRectMake(0.0, 0.0, 310.0, 40.0)];
@@ -24,6 +27,8 @@
     return view;
 }
 
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -51,7 +56,9 @@
     return self;
 }
 
-/* ============================================================ Private Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Private Methods
+
 - (void)donePressed
 {
    [_accessoryViewDelegate didSelectDone];

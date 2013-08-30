@@ -12,14 +12,15 @@
 
 
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "BCTextFieldCell.h"
 #import "BCAbstractField.h"
 
 
 @implementation BCTextFieldCell
 
-/* ============================================================ Initializers ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -41,7 +42,9 @@
     [_textField removeObserver:self forKeyPath:@"textColor"];
 }
 
-/* ========================================================== Interface Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Interface Methods
+
 - (void)setEditable:(BOOL)editable
 {
     _editable = editable;
@@ -117,7 +120,8 @@
     }
 }
 
-/* ============================================================ Private Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Private Methods
 
 
 - (void)initLabel

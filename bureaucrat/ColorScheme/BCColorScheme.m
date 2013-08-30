@@ -16,7 +16,9 @@
 @implementation BCColorScheme
 
 
-/* =========================================================== Class Methods ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Class Methods
+
 + (instancetype)defaultColorScheme
 {
     return [[self alloc]
@@ -34,7 +36,9 @@
 }
 
 
-/* ============================================================ Initializers ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
+
 - (id)initWithCellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor sectionTitleColor:(UIColor*)sectionTitleColor
         defaultTextColor:(UIColor*)defaultTextColor selectedTextColor:(UIColor*)selectedTextColor buttonTintColor:(UIColor*)buttonTintColor
 {
@@ -51,7 +55,9 @@
     return self;
 }
 
-/* ============================================================ Utility Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Utility Methods
+
 - (NSString*)description
 {
     NSMutableString* description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];

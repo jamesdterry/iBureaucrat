@@ -19,7 +19,9 @@
 
 @implementation BCPickerField
 
-/* ============================================================ Initializers ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
+
 - (id)initWithLabel:(NSString*)label cellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor
         sectionTitleColor:(UIColor*)sectionTitleColor
 {
@@ -32,7 +34,8 @@
     return self;
 }
 
-/* ========================================================== Interface Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Interface Methods
 
 
 - (void)addOption:(id <NSObject>)option
@@ -112,7 +115,8 @@
 }
 
 
-/* =========================================================== Protocol Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Protocol Methods
 #pragma mark - <UIPickerViewDelegate>
 
 - (void)pickerView:(UIPickerView*)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -156,7 +160,9 @@
 }
 
 
-/* ============================================================ Private Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Private Methods
+
 - (void)initPickerView
 {
     _pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 260, 320, 216)];

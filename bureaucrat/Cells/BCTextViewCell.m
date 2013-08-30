@@ -10,14 +10,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "BCTextViewCell.h"
 #import "BCAbstractField.h"
 #import "BCFormSection.h"
 #import "BCForm.h"
 #import "BCFormView.h"
 
-/* ============================================================ Initializers ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
+
 @implementation BCTextViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier
@@ -33,7 +34,9 @@
 }
 
 
-/* ========================================================== Interface Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Interface Methods
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -75,7 +78,9 @@
 }
 
 
-/* ============================================================ Private Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Private Methods
+
 - (void)initLabel
 {
     _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 90, 30)];

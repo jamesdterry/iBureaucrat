@@ -19,7 +19,9 @@
 
 @implementation BCFormSection
 
-/* =========================================================== Class Methods ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Class Methods
+
 + (id)sectionWithTitle:(NSString*)title
 {
     return [[self alloc] initWithTitle:title cellColor:nil selectedCellColor:nil sectionTitleColor:nil];
@@ -31,7 +33,9 @@
     return [[self alloc] initWithTitle:title cellColor:cellColor selectedCellColor:selectedCellColor sectionTitleColor:sectionTitleColor];
 }
 
-/* ============================================================ Initializers ============================================================ */
+/* ====================================================================================================================================== */
+#pragma mark - Initialization & Destruction
+
 - (id)initWithTitle:(NSString*)title cellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor
         sectionTitleColor:(UIColor*)sectionTitleColor
 {
@@ -47,7 +51,9 @@
     return self;
 }
 
-/* ========================================================== Interface Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Interface Methods
+
 - (NSArray*)fields
 {
     return [_fields copy];
@@ -107,7 +113,9 @@
 }
 
 
-/* ============================================================ Utility Methods ========================================================= */
+/* ====================================================================================================================================== */
+#pragma mark - Utility Methods
+
 - (NSString*)description
 {
     return [NSString stringWithFormat:@"BCForm Section: title=%@", _title];

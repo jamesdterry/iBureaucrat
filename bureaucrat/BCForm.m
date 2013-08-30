@@ -37,6 +37,7 @@
     {
         _sections = [[NSMutableArray alloc] init];
         _colorScheme = colorScheme;
+        [self build];
     }
     return self;
 }

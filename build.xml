@@ -21,6 +21,7 @@
     <target name="build" depends="
         --init,
         --clean,
+        --app.build,
         --api.report,
         --publish.site"/>
 
@@ -63,6 +64,13 @@
         <delete dir="${target.dir}"/>
         <delete dir="${user.home}/Library/Developer/Xcode/DerivedData"/>
     </target>
+
+    <target name="--app.build">
+        <exec executable="${xcodebuild}" failonerror="true">
+            <arg line="CONFIGURATION_BUILD_DIR='${target.dir}' -workspace ${module.name}.xcworkspace -scheme ${module.name} -sdk iphonesimulator${module.sdk.version} -arch i386"/>
+        </exec>
+    </target>
+
 
     <target name="--api.report">
         <mkdir dir="${reports.dir}/api"/>

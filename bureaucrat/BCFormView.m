@@ -58,6 +58,7 @@
     _form.view = self;
     NSLog(@"Using form: %@", form);
     [_formNavigationAccessory.doneButton setTintColor:_form.colorScheme.buttonTintColor];
+    [_tableView setSeparatorColor:_form.colorScheme.separatorColor];
 }
 
 - (void)setCurrentlyEditingCell:(BCAbstractCell*)currentlyEditingCell
@@ -279,9 +280,8 @@
 {
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 50, 300, 400) style:UITableViewStyleGrouped];
 
-    UIView* backgroundView = [[UIView alloc] init];
-    [backgroundView setBackgroundColor:[UIColor clearColor]];
-    [_tableView setBackgroundView:backgroundView];
+    [_tableView setBackgroundView:nil];
+    [_tableView setBackgroundColor:[UIColor clearColor]];
 
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -310,7 +310,7 @@
 
 - (void)setScrollable:(BOOL)isScrollable
 {
-  [_tableView setScrollEnabled:isScrollable];
+    [_tableView setScrollEnabled:isScrollable];
 }
 
 
@@ -333,7 +333,7 @@
     CGSize cellSize = cell.frame.size;
 
     CGFloat actualY =
-            screenSize.height - [self keyboardSize].height - accessorySize.height - cellSize.height - -_tableView.contentOffset.y - padding;
+        screenSize.height - [self keyboardSize].height - accessorySize.height - cellSize.height - -_tableView.contentOffset.y - padding;
     CGFloat visibleY = actualY;
 
     if (y > visibleY)
@@ -388,4 +388,5 @@
 {
     return [self rectWithOrientation:orientation].size;
 }
+
 @end

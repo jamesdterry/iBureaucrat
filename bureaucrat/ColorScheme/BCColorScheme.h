@@ -25,15 +25,14 @@
 @property(nonatomic, strong) UIColor* defaultTextColor;
 @property(nonatomic, strong) UIColor* selectedTextColor;
 @property(nonatomic, strong) UIColor* buttonTintColor;
+@property(nonatomic, strong) UIColor* separatorColor;
 
 + (instancetype)defaultColorScheme;
 
-+ (instancetype)schemeWithCellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor
-        sectionTitleColor:(UIColor*)sectionTitleColor defaultTextColor:(UIColor*)defaultTextColor
-        selectedTextColor:(UIColor*)selectedTextColor buttonTintColor:(UIColor*)buttonTintColor;
 
 - (id)initWithCellColor:(UIColor*)cellColor selectedCellColor:(UIColor*)selectedCellColor sectionTitleColor:(UIColor*)sectionTitleColor
-        defaultTextColor:(UIColor*)defaultTextColor selectedTextColor:(UIColor*)selectedTextColor buttonTintColor:(UIColor*)buttonTintColor;
+    defaultTextColor:(UIColor*)defaultTextColor selectedTextColor:(UIColor*)selectedTextColor buttonTintColor:(UIColor*)buttonTintColor
+    separatorColor:(UIColor*)separatorColor;
 
 
 @end

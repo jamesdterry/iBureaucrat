@@ -5,9 +5,8 @@ A forms library for iOS.
 
 ##Status?
 
-* **Update:** The <a href="http://escoz.com/open-source/quickdialog">QuickDialog</a> project looks very promising. .
-* iPad not yet supported (though this will be very simple to add). 
-
+* Still alpha quality - especially, needs a little attention for iOS7. Typhoonframework.org is taking up most of my 
+time lately. If you have a feature request or need some suport, get in touch and I'll do what I can. 
 
 ![Form](http://jasperblues.github.com/iBureaucrat/form.png)
 ![Edit](http://jasperblues.github.com/iBureaucrat/edit.png)

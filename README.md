@@ -5,8 +5,9 @@ A forms library for iOS.
 
 ##Status?
 
-* Still alpha quality - especially, needs a little attention for iOS7. Typhoonframework.org is taking up most of my 
-time lately. If you have a feature request or need some suport, get in touch and I'll do what I can. 
+* Still alpha quality - especially, needs a little attention for iOS7. <a href="http://www.typhoonframework.org>Typhoon
+Framework</a> is taking up most of my time lately, however, if you have a feature request or need some suport, get in 
+touch and I'll do what I can. 
 
 ![Form](http://jasperblues.github.com/iBureaucrat/form.png)
 ![Edit](http://jasperblues.github.com/iBureaucrat/edit.png)

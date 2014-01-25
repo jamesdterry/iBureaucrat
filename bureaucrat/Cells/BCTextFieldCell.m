@@ -10,9 +10,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-#import <CKUITools/UIView+Position.h>
 #import "BCTextFieldCell.h"
 #import "BCAbstractField.h"
 
@@ -99,7 +96,7 @@
 
     CGPoint textFieldPos = (CGPoint) {
         labelPos.x + labelSize.width,
-        _label.y
+        _label.frame.origin.y
     };
     _textField.frame = CGRectMake(textFieldPos.x, textFieldPos.y, textFieldSize.width, textFieldSize.height);
 

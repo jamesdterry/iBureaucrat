@@ -35,17 +35,26 @@
 /* ====================================================================================================================================== */
 #pragma mark - Initialization & Destruction
 
+- (void)awakeFromNib
+{
+  [self setup];
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self)
-    {
-        [self setClipsToBounds:YES];
-        [self initContentView];
-        [self initTableView];
-        [self initNavigationAccessory];
+    if (self) {
+        [self setup];
     }
     return self;
+}
+
+- (void)setup
+{
+  [self setClipsToBounds:YES];
+  [self initContentView];
+  [self initTableView];
+  [self initNavigationAccessory];
 }
 
 

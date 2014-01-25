@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E051AB0A83342DAA451273F /* libPods-bureaucratTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A043C0135FFA4C95A404B63E /* libPods-bureaucratTests.a */; settings = {}; };
+		1AD42FB218947001007136C6 /* BCSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD42FB118947001007136C6 /* BCSwitchCell.m */; };
+		1AD42FB518947028007136C6 /* BCSwitchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD42FB418947028007136C6 /* BCSwitchField.m */; };
+		1E051AB0A83342DAA451273F /* libPods-bureaucratTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A043C0135FFA4C95A404B63E /* libPods-bureaucratTests.a */; };
 		6B008FF0170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
 		6B008FF1170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
 		6B008FF2170C244A00DB737B /* BCFormSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD3170C244A00DB737B /* BCFormSection.m */; };
@@ -84,6 +86,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AD42FB018947001007136C6 /* BCSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSwitchCell.h; sourceTree = "<group>"; };
+		1AD42FB118947001007136C6 /* BCSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSwitchCell.m; sourceTree = "<group>"; };
+		1AD42FB318947028007136C6 /* BCSwitchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSwitchField.h; sourceTree = "<group>"; };
+		1AD42FB418947028007136C6 /* BCSwitchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSwitchField.m; sourceTree = "<group>"; };
 		48569C37ECA243059708F32B /* libPods-bureaucratTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bureaucratTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E102EDFAD18450BB53BD57F /* Pods-bureaucratTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bureaucratTests.xcconfig"; path = "Pods/Pods-bureaucratTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		6B008FD0170C244A00DB737B /* BCForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCForm.h; sourceTree = "<group>"; };
@@ -133,7 +139,7 @@
 		6BD31B00170C189A007BAF4F /* bureaucratTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bureaucratTests.m; sourceTree = "<group>"; };
 		6F0DADA2B6B24E6B9EAA6D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A768AB84C024EBF87E9657C /* Pods-bureaucratTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bureaucratTests.xcconfig"; path = "Pods/Pods-bureaucratTests.xcconfig"; sourceTree = SOURCE_ROOT; };
-		A043C0135FFA4C95A404B63E /* libPods-bureaucratTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-bureaucratTests.a"; path = "libPods-bureaucratTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A043C0135FFA4C95A404B63E /* libPods-bureaucratTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bureaucratTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA79801171376769C364AEA7 /* FundsTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundsTransferViewController.m; sourceTree = "<group>"; };
 		BA798084CD9772FBF7B47167 /* BCColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCColorScheme.m; sourceTree = "<group>"; };
 		BA7980CA271AEB51B8380BF6 /* BCMultiLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMultiLineTextField.h; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 		6B008FDB170C244A00DB737B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1AD42FB018947001007136C6 /* BCSwitchCell.h */,
+				1AD42FB118947001007136C6 /* BCSwitchCell.m */,
 				6B008FDC170C244A00DB737B /* BCAbstractCell.h */,
 				6B008FDD170C244A00DB737B /* BCAbstractCell.m */,
 				6B008FDE170C244A00DB737B /* BCCellDelegate.h */,
@@ -212,6 +220,8 @@
 		6B008FE3170C244A00DB737B /* Fields */ = {
 			isa = PBXGroup;
 			children = (
+				1AD42FB318947028007136C6 /* BCSwitchField.h */,
+				1AD42FB418947028007136C6 /* BCSwitchField.m */,
 				6B008FE4170C244A00DB737B /* BCAbstractField.h */,
 				6B008FE5170C244A00DB737B /* BCAbstractField.m */,
 				6B008FE6170C244A00DB737B /* BCPasswordField.h */,
@@ -437,8 +447,6 @@
 			mainGroup = 6BD31AC3170C189A007BAF4F;
 			productRefGroup = 6BD31ACD170C189A007BAF4F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				6BD31ACB170C189A007BAF4F /* bureaucrat */,
@@ -504,7 +512,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 1;
 		};
 		EB50EB0187E64EE2986E57CA /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -519,7 +526,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-bureaucratTests-resources.sh\"\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -532,6 +538,7 @@
 				6B008FF2170C244A00DB737B /* BCFormSection.m in Sources */,
 				6B008FF4170C244A00DB737B /* BCFormView.m in Sources */,
 				6B008FF6170C244A00DB737B /* UITableView+IndexPaths.m in Sources */,
+				1AD42FB518947028007136C6 /* BCSwitchField.m in Sources */,
 				6B008FF8170C244A00DB737B /* UITextField+AbstractFormCell.m in Sources */,
 				6B008FFA170C244A00DB737B /* BCAbstractCell.m in Sources */,
 				6B008FFC170C244A00DB737B /* BCPasswordCell.m in Sources */,
@@ -546,6 +553,7 @@
 				BA798742848A56F02C4EFAAD /* FundsTransferViewController.m in Sources */,
 				BA798F4A76EE34D7C0E87FF7 /* FundsTransferView.m in Sources */,
 				BA798D4C1753F245ED71E5BE /* Vehicle.m in Sources */,
+				1AD42FB218947001007136C6 /* BCSwitchCell.m in Sources */,
 				BA798E7B0DDEC941EE73E5D4 /* BCMultiLineTextField.m in Sources */,
 				BA798B7DDCA78F23B8C4DAEE /* BCTextViewCell.m in Sources */,
 				BA7983AC4CC989195E8C0CF7 /* BCColorScheme.m in Sources */,

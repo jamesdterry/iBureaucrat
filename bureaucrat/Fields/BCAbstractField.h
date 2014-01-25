@@ -30,7 +30,6 @@
     UIColor* _cellColor;
     UIColor* _selectedCellColor;
     UIColor* _sectionTitleColor;
-    UIColor* _textColor;
     UIColor* _selectedTextColor;
 
     id<NSObject> _value;
@@ -65,7 +64,7 @@
 /**
 * Overrides the property in BCForm or BCFormSection, for this specific field.
 */
-@property(nonatomic, strong) UIColor* textColor;
+@property(nonatomic, strong) UIColor *textColor;
 
 /**
 * Overrides the property in BCForm or BCFormSection, for this specific field.

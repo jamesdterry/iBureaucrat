@@ -34,5 +34,11 @@
     cell.textView.text = value;
 }
 
+- (void)setAttributedString:(NSAttributedString *)value
+{
+  BCTextViewCell* cell = (BCTextViewCell*) self.cell;
+  cell.textView.attributedText = value;
+}
+
 
 @end

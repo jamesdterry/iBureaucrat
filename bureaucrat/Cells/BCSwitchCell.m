@@ -55,13 +55,13 @@
     myPos.x + 20,
     (mySize.height - labelSize.height) / 2
   };
-  _label.frame = CGRectMake(labelPos.x, labelPos.y, labelSize.width, labelSize.height);
+  _label.frame = CGRectMake(labelPos.x, labelPos.y, 160, labelSize.height);
   
   CGSize switchFieldSize = _switchField.frame.size;
   switchFieldSize.width = mySize.width - labelSize.width;
   
   CGPoint switchFieldPos = (CGPoint) {
-    labelPos.x + labelSize.width,
+    labelPos.x + 200,
     _label.frame.origin.y
   };
   _switchField.frame = CGRectMake(switchFieldPos.x, switchFieldPos.y, switchFieldSize.width, switchFieldSize.height);
@@ -73,7 +73,7 @@
 
 - (void)initLabel
 {
-  _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 90, 30)];
+  _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
   [_label setBackgroundColor:[UIColor clearColor]];
   [_label setFont:[UIFont boldSystemFontOfSize:14]];
   [_label setTextColor:[UIColor darkGrayColor]];
@@ -93,6 +93,7 @@
    */
   [_switchField setBackgroundColor:[UIColor clearColor]];
   _switchField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+  _switchField.on = YES;
   [self addSubview:_switchField];
 }
 

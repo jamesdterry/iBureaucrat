@@ -26,9 +26,9 @@
   BCSwitchCell *cell = [[BCSwitchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
   [cell.label setText:self.label];
   [cell.label setFrame:CGRectMake(cell.label.frame.origin.x, cell.label.frame.origin.y, 100, cell.label.frame.size.height)];
+  
   cell.textField.returnKeyType = UIReturnKeyDefault;
   cell.label.textColor = [UIColor redColor];
-  
   
   if(self.label == nil){
     cell.labelHidden = YES;

@@ -40,7 +40,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    [_textView setTextColor:[UIColor blackColor]];
+    [_textView setTextColor:[UIColor whiteColor]];
     _label.frame = CGRectMake(20, 3, self.frame.size.width - 40, 20);
     _textView.frame = CGRectMake(20, 3 + _label.frame.size.height, self.frame.size.width - 40, 100);
     [_textView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];

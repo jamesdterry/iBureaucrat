@@ -18,4 +18,8 @@
 * Not ready to be used yet.
 */
 @interface BCMultiLineTextField : BCTextField
+
+- (void)setAttributedString:(NSAttributedString *)value;
+
+
 @end

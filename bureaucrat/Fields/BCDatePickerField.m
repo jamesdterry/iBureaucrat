@@ -28,6 +28,8 @@
   self = [super initWithLabel:label cellColor:cellColor selectedCellColor:selectedCellColor sectionTitleColor:sectionTitleColor];
   if (self)
   {
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    [_dateFormatter setDateFormat:@"MMMM d, YYYY"];
     [self initPickerView];
   }
   return self;
@@ -60,6 +62,7 @@
 
 - (NSString*)textValue
 {
+  //return [_dateFormatter stringFromDate:_pickerView.date];
   return self.cell.textField.text;
 }
 
@@ -99,8 +102,10 @@
 
 /* ====================================================================================================================================== */
 
-- (void) dateChanged:(id)sender{
+- (void) dateChanged:(id)sender
+{
   _value = [_pickerView date];
+  self.cell.textField.text = [_dateFormatter stringFromDate:_pickerView.date];
 }
 
 /* ====================================================================================================================================== */

@@ -21,6 +21,7 @@
 {
   UIDatePicker* _pickerView;
   BOOL _hasValue;
+  NSDateFormatter* _dateFormatter;
 }
 
 /**

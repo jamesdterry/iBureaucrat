@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1AD42FB218947001007136C6 /* BCSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD42FB118947001007136C6 /* BCSwitchCell.m */; };
 		1AD42FB518947028007136C6 /* BCSwitchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD42FB418947028007136C6 /* BCSwitchField.m */; };
+		1AF33C0D1894D9C600791FDB /* BCDatePickerField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF33C0C1894D9C600791FDB /* BCDatePickerField.m */; };
 		1E051AB0A83342DAA451273F /* libPods-bureaucratTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A043C0135FFA4C95A404B63E /* libPods-bureaucratTests.a */; };
 		6B008FF0170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
 		6B008FF1170C244A00DB737B /* BCForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B008FD1170C244A00DB737B /* BCForm.m */; };
@@ -90,6 +91,8 @@
 		1AD42FB118947001007136C6 /* BCSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSwitchCell.m; sourceTree = "<group>"; };
 		1AD42FB318947028007136C6 /* BCSwitchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSwitchField.h; sourceTree = "<group>"; };
 		1AD42FB418947028007136C6 /* BCSwitchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSwitchField.m; sourceTree = "<group>"; };
+		1AF33C0B1894D9C600791FDB /* BCDatePickerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDatePickerField.h; sourceTree = "<group>"; };
+		1AF33C0C1894D9C600791FDB /* BCDatePickerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDatePickerField.m; sourceTree = "<group>"; };
 		48569C37ECA243059708F32B /* libPods-bureaucratTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bureaucratTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E102EDFAD18450BB53BD57F /* Pods-bureaucratTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bureaucratTests.xcconfig"; path = "Pods/Pods-bureaucratTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		6B008FD0170C244A00DB737B /* BCForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCForm.h; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				6B008FEB170C244A00DB737B /* BCTextField.m */,
 				BA7980CA271AEB51B8380BF6 /* BCMultiLineTextField.h */,
 				BA7984CEDD99AD1E2C3D4F7D /* BCMultiLineTextField.m */,
+				1AF33C0B1894D9C600791FDB /* BCDatePickerField.h */,
+				1AF33C0C1894D9C600791FDB /* BCDatePickerField.m */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 				BA798742848A56F02C4EFAAD /* FundsTransferViewController.m in Sources */,
 				BA798F4A76EE34D7C0E87FF7 /* FundsTransferView.m in Sources */,
 				BA798D4C1753F245ED71E5BE /* Vehicle.m in Sources */,
+				1AF33C0D1894D9C600791FDB /* BCDatePickerField.m in Sources */,
 				1AD42FB218947001007136C6 /* BCSwitchCell.m in Sources */,
 				BA798E7B0DDEC941EE73E5D4 /* BCMultiLineTextField.m in Sources */,
 				BA798B7DDCA78F23B8C4DAEE /* BCTextViewCell.m in Sources */,

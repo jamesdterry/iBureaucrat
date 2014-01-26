@@ -28,7 +28,7 @@
     self = [super initWithLabel:label cellColor:cellColor selectedCellColor:selectedCellColor sectionTitleColor:sectionTitleColor];
     if (self)
     {
-        _options = [[NSMutableArray alloc] init];
+        [self clearOptions];
         [self initPickerView];
     }
     return self;
@@ -37,11 +37,23 @@
 /* ====================================================================================================================================== */
 #pragma mark - Interface Methods
 
+- (void)clearOptions
+{
+  _options = [[NSMutableArray alloc] init];
+  _option_codes = [[NSMutableArray alloc] init];
+}
 
 - (void)addOption:(id <NSObject>)option
 {
     [_options addObject:option];
 }
+
+- (void)addOption:(id<NSObject>)option withCode:(id<NSObject>)code
+{
+  [_options addObject:option];
+  [_option_codes addObject:code];
+}
+
 
 - (void)addOptions:(NSArray*)options
 {
@@ -78,6 +90,11 @@
     return (BCTextFieldCell*) [super cell];
 }
 
+- (id<NSObject>)code
+{
+  return _code;
+}
+
 - (NSString*)textValue
 {
     return self.cell.textField.text;
@@ -87,7 +104,9 @@
 {
     [super setValue:value];
     NSUInteger row = [_options indexOfObject:value];
-    [self pickerView:_pickerView didSelectRow:row inComponent:0];
+    if (row != NSNotFound) {
+      [self pickerView:_pickerView didSelectRow:row inComponent:0];
+    }
 }
 
 - (void)formCellWasFocused:(BCAbstractCell*)cell
@@ -126,6 +145,9 @@
         NSString* selected = [self displayValueFor:[_options objectAtIndex:row]];
         self.cell.textField.text = selected;
         _value = [_options objectAtIndex:row];
+      if ([_option_codes count] > row) {
+        _code = [_option_codes objectAtIndex:row];
+      }
     }
 }
 

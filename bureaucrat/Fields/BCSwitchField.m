@@ -36,6 +36,13 @@
   return cell;
 }
 
+- (id<NSObject>)value
+{
+  BCSwitchCell *selfCell = (BCSwitchCell *)(self.cell);
+  
+  return [NSNumber numberWithBool:selfCell.switchField.on];
+}
+
 - (void)setValue:(NSNumber *)value
 {
   [super setValue:value];

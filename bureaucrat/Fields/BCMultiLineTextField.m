@@ -20,12 +20,13 @@
 
 - (BCAbstractCell*)createCellInstance;
 {
-    BCTextViewCell* cell = [[BCTextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    [cell.label setText:self.label];
-    cell.textField.returnKeyType = UIReturnKeyDefault;
-    cell.textField.delegate = self;
-    cell.textField.formCell = cell;
-    return cell;
+  BCTextViewCell* cell = [[BCTextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+  [cell.label setText:self.label];
+  cell.textField.returnKeyType = UIReturnKeyDefault;
+  cell.textField.delegate = self;
+  cell.textField.formCell = cell;
+  cell.textView.backgroundColor = [UIColor darkGrayColor];
+  return cell;
 }
 
 - (void)setValue:(NSString*)value
@@ -39,6 +40,5 @@
   BCTextViewCell* cell = (BCTextViewCell*) self.cell;
   cell.textView.attributedText = value;
 }
-
 
 @end

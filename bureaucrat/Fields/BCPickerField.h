@@ -23,6 +23,7 @@
     NSMutableArray* _options;
     NSMutableArray* _option_codes;
     BOOL _hasValue;
+    BOOL _shouldInitPicker;
     id<NSObject> _code;
 }
 

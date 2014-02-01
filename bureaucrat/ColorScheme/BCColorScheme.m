@@ -22,10 +22,10 @@
 + (instancetype)defaultColorScheme
 {
     return [[self alloc]
-        initWithCellColor:[UIColor blackColor] selectedCellColor:[UIColor colorWithRed:0.639 green:0.831 blue:0.486 alpha:1.0]
-        sectionTitleColor:[UIColor colorWithRed:0.639 green:0.831 blue:0.486 alpha:1.0] defaultTextColor:[UIColor darkGrayColor]
+        initWithCellColor:[UIColor whiteColor] selectedCellColor:[UIColor darkGrayColor]
+        sectionTitleColor:[UIColor darkGrayColor] defaultTextColor:[UIColor darkGrayColor]
         selectedTextColor:[UIColor colorWithRed:51 green:51 blue:51 alpha:1.0]
-        buttonTintColor:[UIColor colorWithRed:0.639 green:0.831 blue:0.486 alpha:1.0] separatorColor:[UIColor lightGrayColor]];
+        buttonTintColor:[UIColor whiteColor] separatorColor:[UIColor whiteColor]];
 }
 
 

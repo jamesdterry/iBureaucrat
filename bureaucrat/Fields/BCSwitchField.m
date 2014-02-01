@@ -28,7 +28,7 @@
   [cell.label setFrame:CGRectMake(cell.label.frame.origin.x, cell.label.frame.origin.y, 100, cell.label.frame.size.height)];
   
   cell.textField.returnKeyType = UIReturnKeyDefault;
-  cell.label.textColor = [UIColor redColor];
+  cell.label.textColor = [UIColor blackColor];
   
   if(self.label == nil){
     cell.labelHidden = YES;

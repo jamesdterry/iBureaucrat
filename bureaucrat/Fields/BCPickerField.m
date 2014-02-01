@@ -39,19 +39,23 @@
 
 - (void)clearOptions
 {
+  _shouldInitPicker = YES;
   _options = [[NSMutableArray alloc] init];
   _option_codes = [[NSMutableArray alloc] init];
+  if (_pickerView) [_pickerView reloadAllComponents];
 }
 
 - (void)addOption:(id <NSObject>)option
 {
-    [_options addObject:option];
+  [_options addObject:option];
+  if (_pickerView) [_pickerView reloadAllComponents];
 }
 
 - (void)addOption:(id<NSObject>)option withCode:(id<NSObject>)code
 {
   [_options addObject:option];
   [_option_codes addObject:code];
+  if (_pickerView) [_pickerView reloadAllComponents];
 }
 
 

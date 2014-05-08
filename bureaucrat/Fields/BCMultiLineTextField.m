@@ -41,4 +41,9 @@
   cell.textView.attributedText = value;
 }
 
+- (CGFloat)preferredHeight
+{
+  return 200;
+}
+
 @end

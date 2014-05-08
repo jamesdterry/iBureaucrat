@@ -243,36 +243,30 @@
 {
     BCFormSection* section = [_form.sections objectAtIndex:indexPath.section];
     BCAbstractField* field = [[section fields] objectAtIndex:indexPath.row];
-    if (field.editable)
-    {
-        [tableView endEditing:YES];
-        if ([indexPath compare:_selectedIndexPath] == NSOrderedSame)
-        {
+    if (field.editable) {
+        // [tableView endEditing:YES];
+        if ([indexPath compare:_selectedIndexPath] == NSOrderedSame) {
             [self scrollToAccommodateCell:_currentlyEditingCell];
             NSLog(@"Currently editing field: %@", _currentlyEditingCell.textField);
             [_currentlyEditingCell.textField resignFirstResponder];
             [_currentlyEditingCell.textField becomeFirstResponder];
-        }
-        else
-        {
-            NSIndexPath* previousSelectedCellIndexPath = _selectedIndexPath;
+        } else {
+            NSIndexPath *previousSelectedCellIndexPath = _selectedIndexPath;
             _selectedIndexPath = indexPath;
-            [_tableView scrollToRowAtIndexPath:_selectedIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
             NSArray* rows;
-            if (previousSelectedCellIndexPath == nil)
-            {
-                rows = [NSArray arrayWithObject:_selectedIndexPath];
+            if (previousSelectedCellIndexPath != nil) {
+              rows = [NSArray arrayWithObject:_selectedIndexPath];
+            } else {
+              rows = [NSArray arrayWithObjects:_selectedIndexPath, previousSelectedCellIndexPath, nil];
             }
-            else
-            {
-                rows = [NSArray arrayWithObjects:_selectedIndexPath, previousSelectedCellIndexPath, nil];
-            }
-            [tableView reloadRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationNone];
+            [_tableView reloadRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationNone];
+            [_tableView scrollToRowAtIndexPath:_selectedIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 
             BOOL previousButtonEnabled = [_selectedIndexPath compare:[tableView firstIndexPath]] == NSOrderedSame ? NO : YES;
             BOOL nextButtonEnabled = [_selectedIndexPath compare:[tableView lastIndexPath]] == NSOrderedSame ? NO : YES;
             [_formNavigationAccessory.previousButton setEnabled:previousButtonEnabled];
             [_formNavigationAccessory.nextButton setEnabled:nextButtonEnabled];
+            [_currentlyEditingCell.textField becomeFirstResponder];
         }
     }
 }
